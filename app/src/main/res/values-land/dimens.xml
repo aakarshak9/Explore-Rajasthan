@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ========================= -->
+    <!-- FOR ALL COMMON COMPONENTS -->
+    <!-- ========================= -->
+    <!-- Common spacing applied between the items in a RecyclerView List -->
+    <dimen name="all_list_items_spacing">8dp</dimen>
+
+    <!-- =========================== -->
+    <!-- FOR THE COMMON CONTENT PAGE -->
+    <!-- =========================== -->
+    <dimen name="guideline_content_page_horizontal_keyline">24dp</dimen>
+    <dimen name="recyclerview_content_page_padding_vertical">24dp</dimen>
+
+    <!-- ====================== -->
+    <!-- FOR THE ABOUT ACTIVITY -->
+    <!-- ====================== -->
+    <dimen name="scrollview_about_content_padding">24dp</dimen>
+
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- This resource is used for storing the information for Shops -->
+
+    <!-- Template followed for the ShopClass data -->
+    <!--<string-array name="shop_template">
+        <item>Name</item>
+        <item>ShopClass Type</item>
+        <item>Rating (in Number)</item>
+        <item>ShopClass Image (path to drawable)</item>
+        <item>Timings</item>
+        <item>Location for Map</item>
+        <item>Site link to more info</item>
+    </string-array>-->
+
+    <!-- WTP -->
+    <string-array name="world_trade_park">
+        <item>World Trade Park</item>
+        <item>Mall</item>
+        <item>4.5</item>
+        <item>@drawable/wtp</item>
+        <item>9:00AM&#8211;10:00PM</item>
+        <item>Jawahar Lal Nehru Marg, D-Block, Malviya Nagar, Jaipur</item>
+        <item>http://wtpjaipur.com/</item>
+    </string-array>
+
+    <!-- MGF -->
+    <string-array name="mgfmetro">
+        <item>MGF Metropolitan Mall</item>
+        <item>Clothing Store</item>
+        <item>4.5</item>
+        <item>@drawable/mgf</item>
+        <item>10:00AM&#8211;6:30PM\n10:00AM&#8211;5:30PM (Sun)</item>
+        <item>22 Godam Cir, Durgadas Colony, C Scheme, Lalkothi, Jaipur</item>
+        <item>https://mgfgroup.in/mgf-metropolitan-jaipur.html</item>
+    </string-array>
+
+    <!-- Pink square Mall -->
+    <string-array name="pink_square">
+        <item>Pink Square Mall</item>
+        <item>Clothing Store</item>
+        <item>4.8</item>
+        <item>@drawable/psm</item>
+        <item>10:00AM&#8211;8:30PM</item>
+        <item tools:ignore="TypographyFractions">Plot No. 1/2, Govind Marg, Saket Colony, Adarsh Nagar, Jaipur</item>
+        <item>https://www.dhamuandcompany.net/pink-square-mall-jaipur.html</item>
+    </string-array>
+
+    <!-- City Mall -->
+    <string-array name="city_mall">
+        <item>City Mall</item>
+        <item>Mall</item>
+        <item>3.8</item>
+        <item>@drawable/cm</item>
+        <item>10:00AM&#8211;8:30PM\nClosed on Sundays</item>
+        <item>Ashok Marg, C-Scheme, C Scheme, Ashok Nagar, Jaipur</item>
+        <item>https://www.tripadvisor.in/Attraction_Review-g304555-d6496052-Reviews-City_Mall-Jaipur_Jaipur_District_Rajasthan.html</item>
+    </string-array>
+
+    <!-- Triton Mall -->
+    <string-array name="triton_mall">
+        <item>triton Mall</item>
+        <item>Shopping Mall</item>
+        <item>4.5</item>
+        <item>@drawable/triton</item>
+        <item>9:00AM&#8211;10:00PM (Weekdays)\n11:00AM&#8211;11:00PM (Weekends)</item>
+        <item>Plot No 1/1, Near Chomu Pulia Circle, Jhotwara Rd, Jhotwara, Jaipur</item>
+        <item>https://www.suncityprojects.com/triton-mall.php</item>
+    </string-array>
+
+    <!-- GT Central -->
+    <string-array name="gt_central">
+        <item>GT Central</item>
+        <item>Clothing Store</item>
+        <item>4.7</item>
+        <item>@drawable/gtc</item>
+        <item>10:00AM&#8211;9:00PM\n10:00AM&#8211;8:00PM (Sun)</item>
+        <item>No. 306, Gaurav Tower, Jawahar Lal Nehru Marg, D-Block, Crystal Court, Malviya Nagar, Jaipur</item>
+        <item>https://www.bardiyagroup.com/project/gt_central</item>
+    </string-array>
+
+    <!-- Elements Mall -->
+    <string-array name="elements_mall">
+        <item>Elements Mall</item>
+        <item>Shopping Mall</item>
+        <item>4.2</item>
+        <item>@drawable/elements</item>
+        <item>10:00AM&#8211;10:00PM</item>
+        <item>192, Bhrigu Nagar Near D.C.M Market, Ajmer Rd, Jaipur</item>
+        <item>http://www.kpggroup.in/details.php?project_id=34</item>
+    </string-array>
+
+    <!-- Crystal Court Mall -->
+    <string-array name="crystal_court_mall">
+        <item>Crystal Court Mall</item>
+        <item>Shopping Mall</item>
+        <item>4.0</item>
+        <item>@drawable/crystalc</item>
+        <item>10:00AM&#8211;10:00PM</item>
+        <item>Gaurav Tower Parking Lot 1, D-Block, Malviya Nagar, Jaipur</item>
+        <item>https://pinkcityroyals.com/jaipur-placeClasses/Crystal_Court_jaipur.php</item>
+    </string-array>
+
+    <!--  Saraogi Mansion Mall -->
+    <string-array name="sarogi_mall">
+        <item>Saraogi Mansion Mall</item>
+        <item>Shopping Mall</item>
+        <item>4.4</item>
+        <item>@drawable/saraogiman</item>
+        <item>10:00AM&#8211;10:00PM</item>
+        <item>Mirza Ismail Rd, Bapu Market, Biseswarji, Jaipur</item>
+        <item>https://www.tripadvisor.in/Attraction_Review-g304555-d6441112-Reviews-Saraogi_Mansion_Mall-Jaipur_Jaipur_District_Rajasthan.html</item>
+    </string-array>
+
+    <!-- Matrix Commercial Mall -->
+    <string-array name="matrix_mall">
+        <item>Matrix Commercial Mall</item>
+        <item>Shopping Mall</item>
+        <item>4.1</item>
+        <item>@drawable/matrixcommercial</item>
+        <item>11:00AM&#8211;9:30PM</item>
+        <item>Sector 6, Jawahar Nagar, Jaipur</item>
+        <item>http://frontdesk.co.in/projects/commercial/matrixmall/</item>
+    </string-array>
+
+</resources>

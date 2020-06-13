@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- This resource is used for storing the information for Hotels -->
+
+    <!-- Template followed for the HotelsClass data -->
+    <!--<string-array name="hotel_template">
+        <item>Name</item>
+        <item>HotelsClass Star Rating Graphic (path to drawable)</item>
+        <item>Traveller Rating (in Number)</item>
+        <item>HotelsClass Image (path to drawable)</item>
+        <item>Rate per Night</item>
+        <item>Location for Map</item>
+        <item>Phone Number</item>
+        <item>Site link to more info</item>
+    </string-array>-->
+
+    <!-- Shiv Niwas -->
+    <string-array name="shiv_niwas_palace">
+        <item>Shiv Niwas Palace</item>
+        <item>@drawable/layer_hot_fiveee_star</item>
+        <item>4.8</item>
+        <item>@drawable/shivniwas</item>
+        <item>₹18000 (2 adults per Night)</item>
+        <item>Lake Pichola, The City Palace Complex, Udaipur, Rajasthan 313001</item>
+        <item>02942528016</item>
+        <item>https://hrhhotels.com/hotelsClasses/shiv_niwas_palace/</item>
+    </string-array>
+
+    <!-- Umaid Bhavan Palace HotelsClass -->
+    <string-array name="umaid_bhavan_hotel">
+        <item>Umaid Bhawan Palace</item>
+        <item>@drawable/layer_3_star</item>
+        <item>3.9</item>
+        <item>@drawable/umaidbhawan</item>
+        <item>₹15000 (2 adults per Night)</item>
+        <item>D1-2A, Behind Collectorate, Via Bank Road, Bani Park, Jaipur, Rajasthan 302016</item>
+        <item>0141 231 6184</item>
+        <item>https://www.tajhotels.com/en-in/taj/umaid-bhawan-palace-jodhpur/</item>
+    </string-array>
+
+    <!-- Radisson Blu Plaza -->
+    <string-array name="oberoi_udaivilas_hotel">
+        <item>Oberoi UdaiVilas Hotel</item>
+        <item>@drawable/layer_hot_fiveee_star</item>
+        <item>4.5</item>
+        <item>@drawable/oberoi</item>
+        <item>₹13000 (2 adults per Night)</item>
+        <item>Badi-Gorela-Mulla Talai Rd, Haridas Ji Ki Magri, Pichola, Udaipur, Rajasthan 313001</item>
+        <item>0294 243 3300</item>
+        <item>https://www.oberoihotels.com/hotelsClasses-in-udaipur-udaivilas-resort/</item>
+    </string-array>
+
+    <!-- Mihir Garh Palace -->
+    <string-array name="mihir_garh_hotel">
+        <item>Mihir Garh Palace</item>
+        <item>@drawable/layer_hot_fiveee_star</item>
+        <item>4.0</item>
+        <item>@drawable/mihir</item>
+        <item>₹11500 (2 adults per Night)</item>
+        <item>Village, Khandi, Rajasthan 306421</item>
+        <item>0124 465 4330</item>
+        <item>https://houseofrohet.com/mihir_garh/</item>
+    </string-array>
+
+    <!-- Alila Fort HotelsClass -->
+    <string-array name="alila_fort_hotel">
+        <item>Alila Fort Hotel</item>
+        <item>@drawable/layer_hot_fourrr_star</item>
+        <item>4.5</item>
+        <item>@drawable/alila</item>
+        <item>₹11500 (2 adults per Night)</item>
+        <item>Off NH-8 at Manoharpur Bishangarh Village, Jaipur Bishangarh, Manoharpur, Rajasthan 303104</item>
+        <item>072300 58058</item>
+        <item>https://www.alilahotels.com/fortbishangarh</item>
+    </string-array>
+
+    <!-- Patan Mahal HotelsClass -->
+    <string-array name="patan_mahal_hotel">
+        <item>Patan Mahal Hotel</item>
+        <item>@drawable/layer_hot_fourrr_star</item>
+        <item>4.0</item>
+        <item>@drawable/patanmahal</item>
+        <item>₹6500 (2 adults per Night)</item>
+        <item>Patan Mahal V PO PATAN TANWARAWATI Tehsil . NEEM KA THANA Distt : SIKAR : Pincode 332718 Rajasthan</item>
+        <item>01574-282311</item>
+        <item>https://patanmahal.com/</item>
+    </string-array>
+
+    <!-- Fateh garh HotelsClass -->
+    <string-array name="fateh_garh_hotel">
+        <item>Fateh Garh hotelsClass</item>
+        <item>@drawable/layer_hot_fourrr_star</item>
+        <item>4.0</item>
+        <item>@drawable/fateh</item>
+        <item>₹7000 (2 adults per Night)</item>
+        <item>Sisarma - Bujra, Road, Udaipur, Rajasthan 313001</item>
+        <item>086969 45109</item>
+        <item>https://www.fatehgarh.in/</item>
+    </string-array>
+
+    <!-- Taj Lake Palace -->
+    <string-array name="taj_lake_palace_hotel">
+        <item>Taj Lake Palace</item>
+        <item>@drawable/layer_hot_fourrr_star</item>
+        <item>4.0</item>
+        <item>@drawable/tajlake</item>
+        <item>₹9000 (2 adults per Night)</item>
+        <item>Pichola, Udaipur, Rajasthan 313001</item>
+        <item>0294 242 8800</item>
+        <item>https://www.tajhotels.com/en-in/taj/taj-lake-palace-udaipur/</item>
+    </string-array>
+
+    <!-- Raas Devigarh HotelsClass -->
+    <string-array name="raas_devigarh_hotel">
+        <item>Raas Devigarh Hotel</item>
+        <item>@drawable/layer_3_star</item>
+        <item>4.5</item>
+        <item>@drawable/raasdevigarh</item>
+        <item>₹8500 (2 adults per Night)</item>
+        <item>NH8, Near Eklingji Temple, Delwara, Udaipur, Rajasthan 313202</item>
+        <item>0291 263 6455</item>
+        <item>https://raashotels.com/</item>
+    </string-array>
+
+    <!-- Rambagh Palace hotelsClass -->
+    <string-array name="rambagh_palace_hotel">
+        <item>Rambagh Palace Hotel</item>
+        <item>@drawable/layer_3_star</item>
+        <item>4.5</item>
+        <item>@drawable/rambagh</item>
+        <item>₹9500 (2 adults per Night)</item>
+        <item>Bhawani Singh Rd, Rambagh, Jaipur, Rajasthan 302005</item>
+        <item>0141 238 5700</item>
+        <item>https://www.tajhotels.com/en-in/taj/rambagh-palace-jaipur/</item>
+    </string-array>
+
+    <!-- Deogarh HotelsClass -->
+    <string-array name="deogarh_hotel">
+        <item>Deogarh Hotel</item>
+        <item>@drawable/layer_3_star</item>
+        <item>4.0</item>
+        <item>@drawable/deogarh</item>
+        <item>₹6500 (2 adults per Night)</item>
+        <item>Palace Rd, Deogarh, Rajasthan 313331</item>
+        <item>099288 34777</item>
+        <item>https://www.deogarhmahal.com/</item>
+    </string-array>
+
+    <!-- Suryagarh HotelsClass -->
+    <string-array name="suryagarh_hotel">
+        <item>Suryagarh Hotel</item>
+        <item>@drawable/layer_3_star</item>
+        <item>4.0</item>
+        <item>@drawable/suryagarh</item>
+        <item>₹8000 (2 adults per Night)</item>
+        <item>Kahala Phata, Jaisalmer - Sam - Dhanana Rd, Jaisalmer, Rajasthan 345001</item>
+        <item>078271 51151</item>
+        <item>https://www.suryagarh.com/</item>
+    </string-array>
+
+    <!-- Samode Palace -->
+    <string-array name="samode_palace_hotel">
+        <item>Samode Palace</item>
+        <item>@drawable/layer_3_star</item>
+        <item>4.0</item>
+        <item>@drawable/samode</item>
+        <item>₹7200 (2 adults per Night)</item>
+        <item>Village Samode, Tehsil Chomu, Jaipur, Rajasthan 303806</item>
+        <item>01423 240 014</item>
+        <item>https://www.samode.com/samodepalace/</item>
+    </string-array>
+
+    <!-- Dadhikar Palace -->
+    <string-array name="dadhikar_palace_hotel">
+        <item>Dadhikar Palace</item>
+        <item>@drawable/layer_3_star</item>
+        <item>4.0</item>
+        <item>@drawable/dadhikar</item>
+        <item>₹5000 (2 adults per Night)</item>
+        <item>Village Dadhikar, Alwar, Rajasthan 301001</item>
+        <item>099821 07400</item>
+        <item>https://www.dadhikar.in/</item>
+    </string-array>
+
+    <!-- Bhainsrorgarh HotelsClass -->
+    <string-array name="bhainsrorgarh_palace_hotel">
+        <item>Bhainsrorgarh Hotel</item>
+        <item>@drawable/layer_3_star</item>
+        <item>4.0</item>
+        <item>@drawable/bhains</item>
+        <item>₹9500 (2 adults per Night)</item>
+        <item>The Palace Via Kota, Bhainsrorgarh, Rajasthan 323304</item>
+        <item>0124 406 2480</item>
+        <item>http://bhainsrorgarh.com/</item>
+    </string-array>
+
+</resources>

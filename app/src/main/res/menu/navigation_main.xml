@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navi_places"
+        android:icon="@drawable/ic_nav_places"
+        android:title="@string/places_nav" />
+
+    <item
+        android:id="@+id/navi_parks"
+        android:icon="@drawable/ic_nav_parks"
+        android:title="@string/parks_nav" />
+
+    <item
+        android:id="@+id/navigation_hotels"
+        android:icon="@drawable/ic_nav_hotels"
+        android:title="@string/hotels_nav" />
+
+    <item
+        android:id="@+id/navi_resturant"
+        android:icon="@drawable/ic_nav_restaurants"
+        android:title="@string/resto_nav" />
+
+    <item
+        android:id="@+id/navi_shops"
+        android:icon="@drawable/ic_nav_shops"
+        android:title="@string/Shops_nav" />
+
+</menu>

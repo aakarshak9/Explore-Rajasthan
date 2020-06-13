@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Colors used by Swipe Refresh Progress Indicator -->
+    <array name="swipe_refresh_colors">
+        <item>@color/colorPrimary</item>
+        <item>@color/colorAccent</item>
+        <item>#00bcd4</item>
+        <item>#607d8b</item>
+    </array>
+
+    <!-- =========================== -->
+    <!-- FOR THE PLACE LIST -->
+    <!-- =========================== -->
+    <array name="place_list_entries">
+        <item>@array/city_palace_jaipur</item>
+        <item>@array/birla_temple</item>
+        <item>@array/jaipur_zoo</item>
+        <item>@array/st_andrew_chruch</item>
+        <item>@array/jodhpur_palace</item>
+        <item>@array/albert_hall</item>
+        <item>@array/hawa_mahal</item>
+        <item>@array/gyan_museum</item>
+        <item>@array/govind_dev_temple</item>
+        <item>@array/nevta_dam</item>
+        <item>@array/pushkar_temple</item>
+        <item>@array/funkingdom</item>
+    </array>
+
+    <!-- ========================== -->
+    <!-- FOR THE PARK LIST -->
+    <!-- ========================== -->
+    <array name="park_list_entries">
+        <item>@array/central_park</item>
+        <item>@array/saheliyon_ki_baari</item>
+        <item>@array/jawahar_circle</item>
+        <item>@array/ranthambore_park</item>
+        <item>@array/sariska_tiger_park</item>
+        <item>@array/desert_national_park</item>
+        <item>@array/nahargarh_bio_park</item>
+        <item>@array/fateh_sagar_lake</item>
+    </array>
+
+    <!-- =========================== -->
+    <!-- FOR THE HOTEL LIST-->
+    <!-- =========================== -->
+    <array name="hotel_list_entries">
+        <item>@array/shiv_niwas_palace</item>
+        <item>@array/umaid_bhavan_hotel</item>
+        <item>@array/oberoi_udaivilas_hotel</item>
+        <item>@array/mihir_garh_hotel</item>
+        <item>@array/alila_fort_hotel</item>
+        <item>@array/patan_mahal_hotel</item>
+        <item>@array/fateh_garh_hotel</item>
+        <item>@array/taj_lake_palace_hotel</item>
+        <item>@array/raas_devigarh_hotel</item>
+        <item>@array/rambagh_palace_hotel</item>
+        <item>@array/deogarh_hotel</item>
+        <item>@array/suryagarh_hotel</item>
+        <item>@array/samode_palace_hotel</item>
+        <item>@array/dadhikar_palace_hotel</item>
+        <item>@array/bhainsrorgarh_palace_hotel</item>
+    </array>
+
+    <!-- ================================ -->
+    <!-- FOR THE RESTAURANT LIST-->
+    <!-- ================================ -->
+    <array name="restaurant_list_entries">
+        <item>@array/choki_dhani</item>
+        <item>@array/sheesh_mahal</item>
+        <item>@array/revolving_resturant</item>
+        <item>@array/samode_haveli</item>
+        <item>@array/gypsy</item>
+        <item>@array/brown_sugar</item>
+        <item>@array/trio</item>
+        <item>@array/jal_mahal</item>
+        <item>@array/aravli_lakeview</item>
+        <item>@array/kalinga</item>
+        <item>@array/dragon_house</item>
+        <item>@array/raj_bagh</item>
+        <item>@array/jagat_niwas_reso</item>
+        <item>@array/the_oborei_van</item>
+        <item>@array/jaisal_italy</item>
+        <item>@array/spice_court</item>
+        <item>@array/padmini_reso</item>
+    </array>
+
+    <!-- ========================== -->
+    <!-- FOR THE SHOP LIST-->
+    <!-- ========================== -->
+    <array name="shop_list_entries">
+        <item>@array/world_trade_park</item>
+        <item>@array/mgfmetro</item>
+        <item>@array/pink_square</item>
+        <item>@array/city_mall</item>
+        <item>@array/triton_mall</item>
+        <item>@array/gt_central</item>
+        <item>@array/elements_mall</item>
+        <item>@array/crystal_court_mall</item>
+        <item>@array/sarogi_mall</item>
+        <item>@array/matrix_mall</item>
+    </array>
+
+</resources>

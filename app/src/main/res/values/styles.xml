@@ -1,0 +1,369 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Style for Custom App Bar -->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- Style for Popups in Custom App Bar -->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Style for the Main Activity of the App -->
+    <style name="AppTheme.Main" />
+
+    <!-- ==================================== -->
+    <!-- COMMON AND/OR BASE STYLES OF THE APP -->
+    <!-- ==================================== -->
+    <!-- Common Style used for Label Buttons -->
+    <style name="MaterialLabelButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/btn_label_material_height</item>
+        <item name="android:minWidth">@dimen/btn_label_material_min_width</item>
+        <item name="android:paddingLeft">@dimen/btn_label_material_padding_left</item>
+        <item name="android:paddingStart" tools:targetApi="jelly_bean_mr1">
+            @dimen/btn_label_material_padding_left
+        </item>
+        <item name="android:paddingEnd" tools:targetApi="jelly_bean_mr1">
+            @dimen/btn_label_material_padding_right
+        </item>
+        <item name="android:paddingRight">@dimen/btn_label_material_padding_right</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+
+    <!-- Common Style used for Action ImageButtons -->
+    <style name="MaterialActionImageButtonStyle" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">@dimen/btn_material_size</item>
+        <item name="android:layout_height">@dimen/btn_material_size</item>
+        <item name="android:layout_marginEnd" tools:ignore="NewApi">@dimen/btn_material_margin
+        </item>
+        <item name="android:layout_marginRight">@dimen/btn_material_margin</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+
+    <!-- Base Style for the CardViews -->
+    <style name="BaseCardLightStyle" parent="CardView.Light">
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardCornerRadius">@dimen/card_all_corner_radius</item>
+    </style>
+
+    <!-- Common Style for the RatingBar -->
+    <style name="SmallRatingBarStyle" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">0.1</item>
+        <item name="layout_constraintHorizontal_bias">0</item>
+    </style>
+
+    <!-- Common Style for the Expand/Collapse Label Button -->
+    <style name="AllExpandCollapseButtonStyle" parent="MaterialLabelButtonStyle">
+        <item name="android:layout_margin">@dimen/btn_material_margin</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:text">@string/expand_action</item>
+    </style>
+
+    <!-- Base Style for the Icons shown in Item Views -->
+    <style name="BaseListItemIconStyle">
+        <item name="android:layout_width">@dimen/all_list_item_icon_size</item>
+        <item name="android:layout_height">@dimen/all_list_item_icon_size</item>
+    </style>
+
+    <!-- Common Style for the Time Icon shown in Item Views -->
+    <style name="AllAccessTimeIconStyle" parent="BaseListItemIconStyle">
+        <item name="srcCompat">@drawable/ic_all_access_time</item>
+    </style>
+
+    <!-- Common Style for the Cost Icon shown in Item Views -->
+    <style name="AllCostIconStyle" parent="BaseListItemIconStyle">
+        <item name="srcCompat">@drawable/ic_all_cost</item>
+    </style>
+
+    <!-- Common Style for the Phone/Call Icon shown in Item Views -->
+    <style name="AllPhoneIconStyle" parent="BaseListItemIconStyle">
+        <item name="srcCompat">@drawable/ic_all_call</item>
+    </style>
+
+    <!-- Common Style for the Location Icon shown in Item Views -->
+    <style name="AllLocationIconStyle" parent="BaseListItemIconStyle">
+        <item name="srcCompat">@drawable/ic_all_map_marker</item>
+    </style>
+
+    <!-- Common Style for the Timings Info shown in Item Views -->
+    <style name="AllTimingsInfoStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/all_list_item_timings_info_margin</item>
+        <item name="android:layout_marginLeft">@dimen/all_list_item_timings_info_margin</item>
+        <item name="android:layout_marginStart" tools:ignore="NewApi">
+            @dimen/all_list_item_timings_info_margin
+        </item>
+        <item name="android:layout_marginEnd" tools:ignore="NewApi">
+            @dimen/all_list_item_timings_info_margin
+        </item>
+        <item name="android:layout_marginRight">@dimen/all_list_item_timings_info_margin</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="layout_constraintHorizontal_bias">0</item>
+        <item name="layout_constrainedWidth">true</item>
+    </style>
+
+    <!-- Common Style for the Contact Info shown in Item Views -->
+    <style name="AllPhoneInfoStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/all_list_item_phone_info_margin</item>
+        <item name="android:layout_marginLeft">@dimen/all_list_item_phone_info_margin</item>
+        <item name="android:layout_marginStart" tools:ignore="NewApi">
+            @dimen/all_list_item_phone_info_margin
+        </item>
+        <item name="android:layout_marginEnd" tools:ignore="NewApi">
+            @dimen/all_list_item_phone_info_margin
+        </item>
+        <item name="android:layout_marginRight">@dimen/all_list_item_phone_info_margin</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="layout_constraintHorizontal_bias">0</item>
+        <item name="layout_constrainedWidth">true</item>
+    </style>
+
+    <!-- Common Style for the Cost Info shown in Item Views -->
+    <style name="AllCostInfoStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/all_list_item_cost_info_margin</item>
+        <item name="android:layout_marginLeft">@dimen/all_list_item_cost_info_margin</item>
+        <item name="android:layout_marginStart" tools:ignore="NewApi">
+            @dimen/all_list_item_cost_info_margin
+        </item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="layout_constraintHorizontal_bias">0</item>
+        <item name="layout_constrainedWidth">true</item>
+    </style>
+
+    <!-- Common Style for the Location Info shown in Item Views -->
+    <style name="AllLocationInfoStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/all_list_item_location_info_margin</item>
+        <item name="android:layout_marginLeft">@dimen/all_list_item_location_info_margin</item>
+        <item name="android:layout_marginStart" tools:ignore="NewApi">
+            @dimen/all_list_item_location_info_margin
+        </item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="layout_constraintHorizontal_bias">0</item>
+        <item name="layout_constrainedWidth">true</item>
+    </style>
+
+    <!-- ================================== -->
+    <!-- STYLES USED FOR CONSTRAINT LAYOUTS -->
+    <!-- ================================== -->
+
+    <!-- Style to align the V component under ConstraintLayout in center_horizontal format -->
+    <style name="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <!-- Style to align the V component under ConstraintLayout to the Top in center_horizontal format -->
+    <style name="ConstraintTopCenterHorizontalStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <!-- Style to align the V component under ConstraintLayout to the Bottom in center_horizontal format -->
+    <style name="ConstraintBottomCenterHorizontalStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <!-- Style to align the V component under ConstraintLayout to the complete Center of its Parent -->
+    <style name="ConstraintCenterInParentStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <!-- Style to align the V component under ConstraintLayout in center_vertical format -->
+    <style name="ConstraintCenterVerticalStyle">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+    </style>
+
+    <!-- Style to align the V component under ConstraintLayout to the Left in center_vertical format -->
+    <style name="ConstraintLeftCenterVerticalStyle" parent="ConstraintCenterVerticalStyle">
+        <item name="layout_constraintLeft_toLeftOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+    </style>
+
+    <!-- Style to align the V component under ConstraintLayout to the Right in center_vertical format -->
+    <style name="ConstraintRightCenterVerticalStyle" parent="ConstraintCenterVerticalStyle">
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintRight_toRightOf">parent</item>
+    </style>
+
+    <!-- =================================== -->
+    <!-- STYLES USED FOR PLACE LIST FRAGMENT -->
+    <!-- =================================== -->
+    <!-- Style for the Divider -->
+    <style name="PlaceListItemDividerStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="android:layout_width">@dimen/match_constraint_0dp</item>
+        <item name="android:layout_height">@dimen/divider_all_list_item_actions_height</item>
+        <item name="android:background">@color/allDividerColor</item>
+    </style>
+
+    <!-- Style for the Title/Name -->
+    <style name="PlaceListItemTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title.Inverse</item>
+        <item name="layout_constraintHorizontal_bias">0</item>
+        <item name="layout_constrainedWidth">true</item>
+    </style>
+
+    <!-- Style for the Rating value -->
+    <style name="PlaceListItemRatingValueStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small.Inverse</item>
+    </style>
+
+    <!-- Style for the Photo -->
+    <style name="PlaceListItemPhotoStyle" parent="ConstraintCenterHorizontalStyle">
+        <item name="android:layout_width">@dimen/match_constraint_0dp</item>
+        <item name="android:layout_height">@dimen/match_constraint_0dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="layout_constraintDimensionRatio">1.8</item>
+    </style>
+
+    <!-- Style for the Description -->
+    <style name="PlaceListItemDescriptionStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/place_list_item_content_margin</item>
+        <item name="android:maxLines">@integer/place_list_item_description_collapsed_max_lines
+        </item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_place_list_item_description_size</item>
+        <item name="layout_constraintHorizontal_bias">0</item>
+        <item name="layout_constrainedWidth">true</item>
+    </style>
+
+    <!-- ================================== -->
+    <!-- STYLES USED FOR PARK LIST FRAGMENT -->
+    <!-- ================================== -->
+    <!-- Style for the Photo -->
+    <style name="ParkListItemPhotoStyle" parent="PlaceListItemPhotoStyle" />
+
+    <!-- Style for the Title/Name -->
+    <style name="ParkListItemTitleStyle" parent="PlaceListItemTitleStyle" />
+
+    <!-- Style for the Rating value -->
+    <style name="ParkListItemRatingValueStyle" parent="PlaceListItemRatingValueStyle" />
+
+    <!-- Style for the Description -->
+    <style name="ParkListItemDescriptionStyle" parent="PlaceListItemDescriptionStyle" />
+
+    <!-- Style for the Divider -->
+    <style name="ParkListItemDividerStyle" parent="PlaceListItemDividerStyle" />
+
+    <!-- =================================== -->
+    <!-- STYLES USED FOR HOTEL LIST FRAGMENT -->
+    <!-- =================================== -->
+    <!-- Style for the Title/Name -->
+    <style name="HotelListItemTitleStyle" parent="PlaceListItemTitleStyle" />
+
+    <!-- Style for the Rating value -->
+    <style name="HotelListItemRatingValueStyle" parent="PlaceListItemRatingValueStyle" />
+
+    <!-- Style for the Photo -->
+    <style name="HotelListItemPhotoStyle" parent="PlaceListItemPhotoStyle" />
+
+    <!-- Style for the Divider -->
+    <style name="HotelListItemDividerStyle" parent="PlaceListItemDividerStyle" />
+
+    <!-- ======================================== -->
+    <!-- STYLES USED FOR RESTAURANT LIST FRAGMENT -->
+    <!-- ======================================== -->
+    <!-- Style for the Photo -->
+    <style name="RestaurantListItemPhotoStyle" parent="PlaceListItemPhotoStyle" />
+
+    <!-- Style for the Title/Name -->
+    <style name="RestaurantListItemTitleStyle" parent="PlaceListItemTitleStyle" />
+
+    <!-- Style for the Rating value -->
+    <style name="RestaurantListItemRatingValueStyle" parent="PlaceListItemRatingValueStyle" />
+
+    <!-- Style for the Divider -->
+    <style name="RestaurantListItemDividerStyle" parent="PlaceListItemDividerStyle" />
+
+    <!-- Style for the Cuisine Icon -->
+    <style name="RestaurantCuisineIconStyle" parent="BaseListItemIconStyle">
+        <item name="srcCompat">@drawable/ic_restaurant_cuisine</item>
+    </style>
+
+    <!-- Style for the Cuisine Info -->
+    <style name="RestaurantCuisineInfoStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/restaurant_list_item_content_half_margin</item>
+        <item name="android:layout_marginLeft">@dimen/restaurant_list_item_content_half_margin
+        </item>
+        <item name="android:layout_marginStart" tools:ignore="NewApi">
+            @dimen/restaurant_list_item_content_half_margin
+        </item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="layout_constraintHorizontal_bias">0</item>
+        <item name="layout_constrainedWidth">true</item>
+    </style>
+
+    <!-- ================================== -->
+    <!-- STYLES USED FOR SHOP LIST FRAGMENT -->
+    <!-- ================================== -->
+    <!-- Style for the Photo -->
+    <style name="ShopListItemPhotoStyle" parent="PlaceListItemPhotoStyle" />
+
+    <!-- Style for the Title/Name -->
+    <style name="ShopListItemTitleStyle" parent="PlaceListItemTitleStyle" />
+
+    <!-- Style for the Rating value -->
+    <style name="ShopListItemRatingValueStyle" parent="PlaceListItemRatingValueStyle" />
+
+    <!-- Style for the Divider -->
+    <style name="ShopListItemDividerStyle" parent="PlaceListItemDividerStyle" />
+
+    <!-- ============================== -->
+    <!-- STYLES USED FOR ABOUT ACTIVITY -->
+    <!-- ============================== -->
+    <!-- Child Style of 'CardView' used for the info content in the About Activity -->
+    <style name="About_Style" parent="CardView">
+        <item name="cardCornerRadius">@dimen/card_about_info_corner_radius</item>
+        <item name="cardBackgroundColor">@color/aboutInfoCardBackgroundColor</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardPreventCornerOverlap">true</item>
+        <item name="cardElevation">@dimen/card_about_info_elevation</item>
+    </style>
+
+    <!-- Style for the Clickable ImageViews shown in the About Activity -->
+    <style name="AboutClickableImageViewStyle">
+        <item name="android:layout_width">@dimen/image_about_bio_icon_size</item>
+        <item name="android:layout_height">@dimen/image_about_bio_icon_size</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Style for the Text content shown in the About Activity -->
+    <style name="AboutContentTextStyle">
+        <item name="android:layout_width">@dimen/match_constraint_0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/card_about_internal_content_margin</item>
+        <item name="android:textSize">@dimen/text_about_content_size</item>
+        <item name="android:textColor">@color/aboutContentTextColor</item>
+    </style>
+
+</resources>

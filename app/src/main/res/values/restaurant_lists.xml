@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- This resource is used for storing the information for Restaurants -->
+
+    <!-- Template followed for the RestaurantClass data -->
+    <!--<string-array name="restaurant_template">
+        <item>Name</item>
+        <item>Cuisine types</item>
+        <item>Foodie Rating (in Number)</item>
+        <item>RestaurantClass Image (path to drawable)</item>
+        <item>Timings</item>
+        <item>Cost</item>
+        <item>Location for Map</item>
+        <item>Phone Number</item>
+        <item>Site link to more info</item>
+    </string-array>-->
+
+    <!-- Choki Dhani -->
+    <string-array name="choki_dhani">
+        <item>Choki Dhani</item>
+        <item>Indian</item>
+        <item>4.9</item>
+        <item>@drawable/choki</item>
+        <item>9:30PM&#8211;11:00PM</item>
+        <item>₹600 for two</item>
+        <item>S-8, Shyam Nagar, Main Ajmer Road, Jaipur-302019</item>
+        <item>+911415166000</item>
+        <item>https://www.chokhidhani.com/</item>
+    </string-array>
+
+    <!-- The Old House -->
+    <string-array name="sheesh_mahal">
+        <item>Sheesh Mahal</item>
+        <item>Multi-Cusion</item>
+        <item>4.6</item>
+        <item>@drawable/sheesh</item>
+        <item>9:30AM&#8211;9:45PM (Mon&#8211;Thu)\n7:30AM&#8211;10:15PM (Fri&#8211;Sun)</item>
+        <item>₹800 for two</item>
+        <item>Pichola, Udaipur, Rajasthan 313001</item>
+        <item>02946701234</item>
+        <item>https://www.theleela.com/en_us/hotelsClasses-in-udaipur/the-leela-palace-hotelsClass-udaipur/dining/sheesh-mahal/</item>
+    </string-array>
+
+    <!-- Revolving Resturant -->
+    <string-array name="revolving_resturant">
+        <item>Revolving Restaurant</item>
+        <item>North Indian, Rajasthani, Mediterranean</item>
+        <item>4.7</item>
+        <item>@drawable/revolving</item>
+        <item>11:30AM&#8211;4:00PM\n6:30PM&#8211;11:00PM</item>
+        <item>₹1600 for two</item>
+        <item>Hotel Om Tower, Church Road, MI Road, Jaipur</item>
+        <item>+911414046629</item>
+        <item>https://www.zomato.com/jaipur/revolving-restaurantClass-mi-road</item>
+    </string-array>
+
+    <!-- Samode Haveli -->
+    <string-array name="samode_haveli">
+        <item>Samode Haveli</item>
+        <item>North Indian, Multi-Cusion</item>
+        <item>4.3</item>
+        <item>@drawable/samodehav</item>
+        <item>10:30PM&#8211;11:00PM</item>
+        <item>₹1000 for two</item>
+        <item>Jorawar Singh Gate, Gangapole Road Near, Gangapole, Jaipur, Rajasthan 302002</item>
+        <item>0141 263 2407</item>
+        <item>https://www.samode.com/samodehaveli/</item>
+    </string-array>
+
+    <!-- Gypsy -->
+    <string-array name="gypsy">
+        <item>Gypsy</item>
+        <item>North Indian, Chinese, South Indian</item>
+        <item>4.0</item>
+        <item>@drawable/gypsy</item>
+        <item>8:00AM&#8211;11:30PM</item>
+        <item>₹400 for two</item>
+        <item>689, 9th C Rd, Sardarpura, Jodhpur, Rajasthan 342003</item>
+        <item>07412074073</item>
+        <item>https://www.zomato.com/jodhpur/gypsy-dining-hall-sardarpura</item>
+    </string-array>
+
+    <!-- Brown Sugar -->
+    <string-array name="brown_sugar">
+        <item>Brown Sugar</item>
+        <item>North Indian, Chinese</item>
+        <item>4.0</item>
+        <item>@drawable/brownsugar</item>
+        <item>9:30AM&#8211;11:30PM</item>
+        <item>₹400 for two</item>
+        <item>Aurum Apartment, Tilak Marg, C Scheme, Jaipur</item>
+        <item>+918854800030</item>
+        <item>https://www.zomato.com/jaipur/brown-sugar-restaurantClass-cafe-bakery-c-scheme</item>
+    </string-array>
+
+    <!-- Trio -->
+    <string-array name="trio">
+        <item>Trio</item>
+        <item>Desserts, Ice Cream</item>
+        <item>4.6</item>
+        <item>@drawable/triopic</item>
+        <item>11:00AM&#8211;11:00PM</item>
+        <item>₹200 for two</item>
+        <item>Gandhi Chowk, Jaisalmer 345001 India</item>
+        <item>+912992252733</item>
+        <item>https://www.tripadvisor.in/Restaurant_Review-g297667-d1195425-Reviews-The_Trio-Jaisalmer_Jaisalmer_District_Rajasthan.html</item>
+    </string-array>
+
+    <!-- Jal Mahal -->
+    <string-array name="jal_mahal">
+        <item>Jal Mahal Restaurant</item>
+        <item>Indian, Rajasthani</item>
+        <item>4.1</item>
+        <item>@drawable/jalmahalpic</item>
+        <item>9:00AM&#8211;10:00PM</item>
+        <item>₹300 for two</item>
+        <item>3/30, behind Police Station, Nagar Nigam Colony, Kagdiwara, Brahampuri, Jaipur, Rajasthan 302002</item>
+        <item>07742749991</item>
+        <item>https://www.tripadvisor.in/Restaurant_Review-g304555-d11800643-Reviews-Jal_Mahal_Restaurant-Jaipur_Jaipur_District_Rajasthan.html</item>
+    </string-array>
+
+    <!-- Aravali Lakeview -->
+    <string-array name="aravli_lakeview">
+        <item>Aravali Lakeview</item>
+        <item>North Indian</item>
+        <item>4.3</item>
+        <item>@drawable/aravali</item>
+        <item>9:30AM&#8211;10:30PM</item>
+        <item>₹200 for two</item>
+        <item>Malla Talai, Udaipur, Rajasthan 313001</item>
+        <item>02943050000</item>
+        <item>https://www.zomato.com/udaipur/aravali-lakeview-radisson-blu-fateh-sagar</item>
+    </string-array>
+
+    <!-- Kalinga -->
+    <string-array name="kalinga">
+        <item>Kalinga</item>
+        <item>South Indian</item>
+        <item>4.0</item>
+        <item>@drawable/kalinga</item>
+        <item>6:30AM&#8211;10:30PM</item>
+        <item>₹300 for two</item>
+        <item>Near, Station Rd, opposite Sahkar Bhawan, Ratanada, Jodhpur, Rajasthan 342001</item>
+        <item>02912615870</item>
+        <item>https://www.tripadvisor.in/Hotel_Review-g297668-d734951-Reviews-Kalinga_Hotel-Jodhpur_Jodhpur_District_Rajasthan.html</item>
+    </string-array>
+
+    <!-- Dragon House -->
+    <string-array name="dragon_house">
+        <item>Dragon House</item>
+        <item>North Indian, Chinese, Continental</item>
+        <item>4.1</item>
+        <item>@drawable/dragon</item>
+        <item>24Hours Open</item>
+        <item>₹1250 for two</item>
+        <item>MI Road, Khasa, Kothi Circle, Jaipur, Rajasthan 302001</item>
+        <item>01414033300</item>
+        <item>https://www.zomato.com/jaipur/dragon-house-radisson-jaipur-city-center-mi-road/menu</item>
+    </string-array>
+
+    <!-- Raj Bagh -->
+    <string-array name="raj_bagh">
+        <item>Raj Bagh</item>
+        <item>Chinese, Continental, North Indian</item>
+        <item>3.4</item>
+        <item>@drawable/rajbagh</item>
+        <item>7:30AM&#8211;11:00PM</item>
+        <item>₹550 for two</item>
+        <item>Jhanwar Rd, near dali bai circle, Bhadu Market, Jodhpur, Rajasthan 342001</item>
+        <item>08003191134</item>
+        <item>https://www.tripadvisor.in/Hotel_Review-g297668-d7315462-Reviews-Treehouse_Rajbagh_Jodhpur-Jodhpur_Jodhpur_District_Rajasthan.html</item>
+    </string-array>
+
+    <!-- Jagat Niwas Resturant -->
+    <string-array name="jagat_niwas_reso">
+        <item>Jagat Niwas Restaurant</item>
+        <item>Indian</item>
+        <item>3.8</item>
+        <item>@drawable/jagatniwas</item>
+        <item>9:00AM&#8211;10:00PM</item>
+        <item>₹500 for two</item>
+        <item>23-25 Behind Jagdish Temple, Lal Ghat Road, Udaipur, Rajasthan 313001</item>
+        <item>02942422860</item>
+        <item>https://www.jagatcollection.com/jagatniwas/</item>
+    </string-array>
+
+    <!-- The Oborei Vanyavilas -->
+    <string-array name="the_oborei_van">
+        <item>The Oborei Vanyavilas</item>
+        <item>Indian</item>
+        <item>4.0</item>
+        <item>@drawable/oberoivanyavilaspic</item>
+        <item>9:00PM&#8211;11:00PM</item>
+        <item>₹800 for two</item>
+        <item>Ranthambhore Rd, Sawai Madhopur, Rajasthan 322001</item>
+        <item>07462223999</item>
+        <item>https://www.oberoihotels.com/hotelsClasses-in-ranthambhore-vanyavilas-resort/</item>
+    </string-array>
+
+    <!-- Jaisal Italy -->
+    <string-array name="jaisal_italy">
+        <item>Jaisal Italy</item>
+        <item>Italian, Continental, North Indian, Chinese</item>
+        <item>4.1</item>
+        <item>@drawable/jaisalpic</item>
+        <item>12:00PM&#8211;3:00pm\n7:00pm&#8211;11:00pm</item>
+        <item>₹1250 for two</item>
+        <item>Fort 1st Gate, Akhey Prol, Gopa Chowk, Rajasthan 345001</item>
+        <item>09928592525</item>
+        <item>https://www.tripadvisor.in/Restaurant_Review-g297667-d1537278-Reviews-Jaisal_Italy-Jaisalmer_Jaisalmer_District_Rajasthan.html</item>
+    </string-array>
+
+    <!-- Spice Court -->
+    <string-array name="spice_court">
+        <item>Spice Court</item>
+        <item>South Indian</item>
+        <item>4.3</item>
+        <item>@drawable/spicecourtpic</item>
+        <item>7:00AM&#8211;12:00PM\n3:00PM&#8211;8:00PM</item>
+        <item>₹100 for two</item>
+        <item>Jacob Rd, Mysore House/Achrol House Colony, Madrampur, Civil Lines, Jaipur, Rajasthan 302006</item>
+        <item>09571970005</item>
+        <item>https://www.zomato.com/jaipur/spice-court-civil-lines</item>
+    </string-array>
+
+    <!-- Padmini Resturant -->
+    <string-array name="padmini_reso">
+        <item>Padmini Restaurant</item>
+        <item>Indian, Chinese &amp; Thai</item>
+        <item>4.4</item>
+        <item>@drawable/padminipic</item>
+        <item>8:00AM&#8211;11:00PM</item>
+        <item>₹1250 for two</item>
+        <item>5th Floor, Hotel Padmini Palace, Gulab Bagh Road, City Centre, Udaipur</item>
+        <item>+912942414191</item>
+        <item>https://www.zomato.com/udaipur/padmini-restaurantClass-city-centre</item>
+    </string-array>
+
+</resources>

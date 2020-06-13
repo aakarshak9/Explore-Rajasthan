@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BaseCardLightStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_place_list_item_left_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/guideline_place_list_item_horizontal_keyline" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_place_list_item_right_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/guideline_place_list_item_horizontal_keyline" />
+
+        <View
+            android:id="@+id/view_place_list_item_top_ribbon"
+            style="@style/ConstraintTopCenterHorizontalStyle"
+            android:layout_width="@dimen/match_constraint_0dp"
+            android:layout_height="@dimen/match_constraint_0dp"
+            app:layout_constraintBottom_toTopOf="@+id/image_place_list_item_photo"
+            tools:background="@color/colorPrimary"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/image_place_list_item_type"
+            android:layout_width="@dimen/image_place_list_item_type_size"
+            android:layout_height="@dimen/image_place_list_item_type_size"
+            app:layout_constraintBottom_toBottomOf="@+id/text_place_list_item_types"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_place_list_item_left_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_place_list_item_left_vertical"
+            app:layout_constraintTop_toTopOf="@+id/text_place_list_item_title"
+            tools:ignore="ContentDescription"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/text_place_list_item_title"
+            style="@style/PlaceListItemTitleStyle"
+            android:layout_marginStart="@dimen/place_list_item_content_margin"
+            android:layout_marginLeft="@dimen/place_list_item_content_margin"
+            android:layout_marginTop="@dimen/place_list_item_content_margin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_place_list_item_right_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_place_list_item_type"
+            app:layout_constraintRight_toRightOf="@+id/guideline_place_list_item_right_vertical"
+            app:layout_constraintStart_toEndOf="@+id/image_place_list_item_type"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/text_place_list_item_types"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_place_list_item_types_margin_top"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+            app:layout_constraintLeft_toLeftOf="@+id/text_place_list_item_title"
+            app:layout_constraintStart_toStartOf="@+id/text_place_list_item_title"
+            app:layout_constraintTop_toBottomOf="@+id/text_place_list_item_title"
+            tools:text="Palace/Heritage" />
+
+        <TextView
+            android:id="@+id/text_place_list_item_types_rating_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/bullet_marks"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+            app:layout_constraintLeft_toRightOf="@+id/text_place_list_item_types"
+            app:layout_constraintStart_toEndOf="@+id/text_place_list_item_types"
+            app:layout_constraintTop_toTopOf="@+id/text_place_list_item_types" />
+
+        <TextView
+            android:id="@+id/text_place_list_item_rating_value"
+            style="@style/PlaceListItemRatingValueStyle"
+            app:layout_constraintLeft_toRightOf="@+id/text_place_list_item_types_rating_separator"
+            app:layout_constraintStart_toEndOf="@+id/text_place_list_item_types_rating_separator"
+            app:layout_constraintTop_toTopOf="@+id/text_place_list_item_types"
+            tools:text="4.5" />
+
+        <RatingBar
+            android:id="@+id/ratingbar_place_list_item_rating"
+            style="@style/SmallRatingBarStyle"
+            android:layout_marginStart="@dimen/ratingbar_place_list_item_rating_margin_left"
+            android:layout_marginLeft="@dimen/ratingbar_place_list_item_rating_margin_left"
+            android:background="@color/placeListItemRatingBackgroundColor"
+            android:padding="@dimen/ratingbar_place_list_item_rating_padding"
+            app:layout_constraintBottom_toBottomOf="@+id/text_place_list_item_rating_value"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_place_list_item_right_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/text_place_list_item_rating_value"
+            app:layout_constraintStart_toEndOf="@+id/text_place_list_item_rating_value"
+            app:layout_constraintTop_toTopOf="@+id/text_place_list_item_rating_value"
+            tools:rating="4.5" />
+
+        <android.widget.Space
+            android:id="@+id/space_place_list_item_photo_top"
+            style="@style/ConstraintCenterHorizontalStyle"
+            android:layout_width="@dimen/match_constraint_0dp"
+            android:layout_height="@dimen/place_list_item_content_margin"
+            app:layout_constraintTop_toBottomOf="@+id/text_place_list_item_types"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/image_place_list_item_photo"
+            style="@style/PlaceListItemPhotoStyle"
+            app:layout_constraintTop_toBottomOf="@+id/space_place_list_item_photo_top"
+            tools:ignore="ContentDescription,MissingConstraints"
+            tools:src="@drawable/layer_def_pic" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_place_list_item_center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/image_place_list_item_access_time"
+            style="@style/AllAccessTimeIconStyle"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_place_list_item_left_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_place_list_item_left_vertical"
+            app:layout_constraintTop_toTopOf="@+id/text_place_list_item_access_time"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/text_place_list_item_access_time"
+            style="@style/AllTimingsInfoStyle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_place_list_item_center_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_place_list_item_access_time"
+            app:layout_constraintRight_toRightOf="@+id/guideline_place_list_item_center_vertical"
+            app:layout_constraintStart_toEndOf="@+id/image_place_list_item_access_time"
+            app:layout_constraintTop_toBottomOf="@+id/image_place_list_item_photo"
+            tools:text="06:00AM&#8211;01:00PM\n05:00PM&#8211;09:00PM\nClosed on Wednesdays" />
+
+        <ImageView
+            android:id="@+id/image_place_list_item_entry_fee"
+            style="@style/AllCostIconStyle"
+            android:layout_marginStart="@dimen/place_list_item_content_half_margin"
+            android:layout_marginLeft="@dimen/place_list_item_content_half_margin"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_place_list_item_center_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_place_list_item_center_vertical"
+            app:layout_constraintTop_toTopOf="@+id/text_place_list_item_entry_fee"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/text_place_list_item_entry_fee"
+            style="@style/AllCostInfoStyle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_place_list_item_right_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_place_list_item_entry_fee"
+            app:layout_constraintRight_toRightOf="@+id/guideline_place_list_item_right_vertical"
+            app:layout_constraintStart_toEndOf="@+id/image_place_list_item_entry_fee"
+            app:layout_constraintTop_toBottomOf="@+id/image_place_list_item_photo"
+            tools:text="Adult: ₹50,\n₹60 (Weekend)\nChild (5&#8211;12 yr): ₹20,\n₹30 (Weekend)" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier_place_list_item_time_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="text_place_list_item_access_time,text_place_list_item_entry_fee" />
+
+        <TextView
+            android:id="@+id/text_place_list_item_description"
+            style="@style/PlaceListItemDescriptionStyle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_place_list_item_right_vertical"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_place_list_item_left_vertical"
+            app:layout_constraintRight_toRightOf="@+id/guideline_place_list_item_right_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_place_list_item_left_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_place_list_item_time_fee"
+            tools:text="@tools:sample/lorem/random" />
+
+        <ImageView
+            android:id="@+id/image_place_list_item_location"
+            style="@style/AllLocationIconStyle"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_place_list_item_left_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_place_list_item_left_vertical"
+            app:layout_constraintTop_toTopOf="@+id/text_place_list_item_location"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/text_place_list_item_location"
+            style="@style/AllLocationInfoStyle"
+            android:layout_marginTop="@dimen/place_list_item_content_margin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_place_list_item_right_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_place_list_item_location"
+            app:layout_constraintRight_toRightOf="@+id/guideline_place_list_item_right_vertical"
+            app:layout_constraintStart_toEndOf="@+id/image_place_list_item_location"
+            app:layout_constraintTop_toBottomOf="@+id/text_place_list_item_description"
+            tools:text="Regional Museum of Natural History, T.N.Pura Road, Opp. Nandini Milk Dairy, Siddhartha Nagar, Mysuru, Karnataka" />
+
+        <android.support.constraint.Group
+            android:id="@+id/group_place_list_item_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="image_place_list_item_location,text_place_list_item_location"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/divider_place_list_item_actions"
+            style="@style/PlaceListItemDividerStyle"
+            android:layout_marginTop="@dimen/place_list_item_content_margin"
+            app:layout_constraintTop_toBottomOf="@+id/text_place_list_item_location" />
+
+        <Button
+            android:id="@+id/btn_place_list_item_expand_collapse"
+            style="@style/AllExpandCollapseButtonStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_place_list_item_actions" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_place_list_item_location"
+            style="@style/MaterialActionImageButtonStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_place_list_item_actions"
+            app:srcCompat="@drawable/ic_all_map_marker"
+            tools:ignore="ContentDescription" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

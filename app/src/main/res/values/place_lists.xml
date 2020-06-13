@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- This resource is used for storing the information for Places -->
+
+    <!-- Template followed for the Places data -->
+    <!--<string-array name="place_template">
+        <item>Name</item>
+        <item>Star Rating (in Number)</item>
+        <item>PlaceClass Types</item>
+        <item>Type icon (path to drawable)</item>
+        <item>PlaceClass Image (path to drawable)</item>
+        <item>Time info</item>
+        <item>Entry Fee</item>
+        <item>Location for Map</item>
+        <item>Brief description</item>
+        <item>Site link to more info</item>
+    </string-array>-->
+
+    <!-- City Palace -->
+    <string-array name="city_palace_jaipur">
+        <item>City Palace</item>
+        <item>4.6</item>
+        <item>Palace/Heritage</item>
+        <item>@drawable/layer_pl_pal</item>
+        <item>@drawable/cityp</item>
+        <item>9:30AM&#8211;6:00PM</item>
+        <item>Adult: ₹300\nChild (7&#8211;12 yr): ₹30</item>
+        <item>Tulsi Marg, Gangori Bazaar, J.D.A. Market, Pink City, Jaipur, Rajasthan 302002</item>
+        <item>The City Palace, Jaipur was established at the same time as the city of Jaipur, by Maharaja Sawai Jai Singh II, who moved his court to Jaipur from Amber, in 1727, Jaipur is the present-day capital of the state of Rajasthan, and until 1949 the City Palace was the ceremonial and administrative seat of the Maharaja of Jaipur.[1] The Palace was also the location of religious and cultural events, as well as a patron of arts, commerce, and industry. It now houses the Maharaja Sawai Man Singh II Museum, and continues to be the home of the Jaipur royal family. The royal family of Jaipur is said to be the descendants of Lord Rama. The palace complex has several buildings, various courtyards, galleries, restaurantClasses, and offices of the Museum Trust. The Maharaja Sawai Man Singh II Museum Trust looks after the Museum, and the royal cenotaphs (known as chhatris).</item>
+        <item>http://www.tourism.rajasthan.gov.in/city-palace.html</item>
+    </string-array>
+
+    <!-- Birla  Temple -->
+    <string-array name="birla_temple">
+        <item>Birla Temple</item>
+        <item>4.5</item>
+        <item>Pilgrimage</item>
+        <item>@drawable/layer_pl_tem</item>
+        <item>@drawable/birlam</item>
+        <item>6:30AM&#8211;2:00PM\n3:30PM&#8211;6:00PM\n7:30PM&#8211;8:00PM</item>
+        <item>Free</item>
+        <item>Birla Mandir, Jawahar Lal Nehru Marg, Tilak Nagar, Jaipur, Rajasthan 302022</item>
+        <item>Birla Mandir, Jaipur (Lakshmi Narayan Temple) is a Hindu temple located in Jaipur, India and is one of many Birla mandirs.It was built by the B.M. Birla Foundation in 1988 and is constructed solely of white marble. It is dedicated to the Hindu Goddess Lakshmi and Lord Vishnu (Narayan), whose images appear inside, along with other Hindu gods and goddesses and selections from the Gita and Upanishads.Festivals such as Diwali and Janamashtami are celebrated at the temple. The temple is open daily with visiting hours between 8:00 AM and 12:00 PM, as well as between 4:00 PM and 8:00 AM. It is located in Jaipur Tilak Nagar neighborhood near Moti Dungari hill.</item>
+        <item>http://www.tourism.rajasthan.gov.in/birla-temple.html</item>
+    </string-array>
+
+    <!-- Jaipur Zoo -->
+    <string-array name="jaipur_zoo">
+        <item>Jaipur Zoo</item>
+        <item>4.5</item>
+        <item>Wildlife</item>
+        <item>@drawable/layer_p_w</item>
+        <item>@drawable/jaipur_zoo</item>
+        <item>9:00AM&#8211;4:00PM\nClosed on Tuesdays</item>
+        <item>Adult: ₹50,\n₹60 (Weekend)\nChild (5&#8211;12 yr): ₹20,\n₹30 (Weekend)</item>
+        <item>Museum Rd, Ram Niwas Garden, Kailash Puri, Ramniwas Bagh, Jaipur, Rajasthan 302004</item>
+        <item>Jaipur Zoo is in the city of Jaipur in Rajasthan state in India. The zoo was opened in 1877 and is located near to the Albert Hall Museum and Ram Nivas Garden. It is divided into two parts: one for mammals and other for birds and reptiles. Nearly 50 species of different birds and animals from all over the world can be seen here. In year 1999, the ghariyal breeding farm is established which is fourth largest breeding farm in India. A museum was also constructed inside the zoo which exhibits the wildlife of Rajasthan. The Jaipur Zoo has been constituted under the Wild Life (Protection) Act. The main objective of the zoo is to complement the national effort in conservation of wild life. In 2018 it was announced that the zoo will be converted into a bird parkClass with large aviaries. Large carnivores have already left the Jaipur zoo.</item>
+        <item>https://jaipurtourism.co.in/jaipur-zoo</item>
+    </string-array>
+
+    <!-- Saint Andrew's Church -->
+    <string-array name="st_andrew_chruch">
+        <item>Saint Andrew\'s Church</item>
+        <item>4.3</item>
+        <item>Pilgrimage</item>
+        <item>@drawable/layer_pla_cath</item>
+        <item>@drawable/standrew</item>
+        <item>5:00AM&#8211;6:00PM</item>
+        <item>Free</item>
+        <item>Chandpole Gate, Out Side, Jaipur, Rajasthan 302006</item>
+        <item>St Andrews Church, located in the heart of the city just outside Chandpole Gate, is one of the oldest church in Rajasthan. It was established by the Scottish Missionaries in 1872.  It is built in an area of 43,515 sq ft. The Church manages its various activities throughout the year by the committees, which includes the Pastorate, Youth, Entertainment and WFCS among many others.</item>
+        <item>https://www.facebook.com/pages/Cni-Saint-Andrews-Church-At-Chandpolejaipur/236875906491268</item>
+    </string-array>
+
+    <!-- Jodhpur Palace -->
+    <string-array name="jodhpur_palace">
+        <item>Jodhpur Palace</item>
+        <item>4.7</item>
+        <item>Museum/Heritage</item>
+        <item>@drawable/layer_pla_mus</item>
+        <item>@drawable/jodhpur_palace</item>
+        <item>12:00AM&#8211;12:00PM</item>
+        <item>Adult: ₹100000\nChild(5&#8211;10years): ₹10000</item>
+        <item>Circuit House Rd, Cantt Area, Jodhpur, Rajasthan 342006</item>
+        <item>Umaid Bhawan Palace, located in Jodhpur in Rajasthan, India, is one of the worlds largest private residences. A part of the palace is managed by Taj Hotels. Named after Maharaja Umaid Singh, grandfather of the present owner Gaj Singh. The palace has 347 rooms and is the principal residence of the former Jodhpur royal family. A part of the palace is a museum.Ground for the foundations of the building was broken on 18 November 1929 by Maharaja Umaid Singh and the construction work was completed in 1943.Recently, Umaid Bhawan Palace was awarded as the Worlds best hotelsClass at the Travellers Choice Award</item>
+        <item>https://www.umaidbhawan.com/</item>
+    </string-array>
+
+    <!-- Albert Hall -->
+    <string-array name="albert_hall">
+        <item>Albert Hall</item>
+        <item>4.5</item>
+        <item>Museum</item>
+        <item>@drawable/layer_pla_mus</item>
+        <item>@drawable/albert</item>
+        <item>10:00AM&#8211;4:00PM\nClosed on Mondays</item>
+        <item>₹300</item>
+        <item>Museum Rd, Ram Niwas Garden, Kailash Puri, Adarsh Nagar, Jaipur, Rajasthan 302004</item>
+        <item>The Albert Hall Museum in Jaipur is the oldest museum of the state and functions as the state museum of Rajasthan, India. The building is situated in Ram Niwas garden outside the city wall opposite New gate and is a fine example of Indo-Saracenic architecture. It is also called the Government Central Museum.</item>
+        <item>http://www.tourism.rajasthan.gov.in/hi/jaipur.html#albert-hall-museum--central-museum-</item>
+    </string-array>
+
+    <!-- Hawa Mahal -->
+    <string-array name="hawa_mahal">
+        <item>Hawa Mahal</item>
+        <item>4.7</item>
+        <item>Palace/Heritage</item>
+        <item>@drawable/layer_pl_pal</item>
+        <item>@drawable/hmahal</item>
+        <item>10:00AM&#8211;6:00PM</item>
+        <item>₹100</item>
+        <item>Hawa Mahal Rd, Badi Choupad, J.D.A. Market, Pink City, Jaipur, Rajasthan 302002</item>
+        <item>Hawa Mahal is a palace in Jaipur, India. Made with the red and pink sandstone, the palace sits on the edge of the City Palace, Jaipur, and extends to the Zenana, or womens chambers. The structure was built in 1799 by Maharaja Sawai Pratap Singh, the grandson of Maharaja Sawai Jai Singh, who was the founder of Jaipur.</item>
+        <item>https://www.hawa-mahal.com/</item>
+    </string-array>
+
+    <!-- Gyan Museum -->
+    <string-array name="gyan_museum">
+        <item>Gyan Museum</item>
+        <item>4.0</item>
+        <item>Museum</item>
+        <item>@drawable/layer_pla_mus</item>
+        <item>@drawable/gyanmu</item>
+        <item>8:30AM&#8211;4:30PM</item>
+        <item>Adult: ₹100\nChild: ₹30</item>
+        <item>Sitapura Industrial Area, Sitapura, Jaipur, Rajasthan 302022</item>
+        <item>Gyan Museum orbits around the assortments of the naturalist, collector and gemologist Late Mr. Gyan Chand Ji Dhaddha (1940-2004). It is a tribute to the legend who in the world that he foresaw formulated his own media. He was born in a traditional Jain family and was surrounded by such philosophy, visuals, and belief systems that instilled in him the love for arts, crafts, poetry and literature. At a tender age of sixteen, his father presented him two objects with which began his childhood fascination for antiques, which in turn led him as an avid collector. He believed that the most beautiful relationship one can have with objects is to own them, and so he travelled his passion and kept collecting the cultural genre.</item>
+        <item>http://gyanjaipur.com/</item>
+    </string-array>
+
+    <!-- Govind Devji Temple -->
+    <string-array name="govind_dev_temple">
+        <item>Govind Devji Temple</item>
+        <item>4.5</item>
+        <item>Temple</item>
+        <item>@drawable/layer_pl_tem</item>
+        <item>@drawable/govi</item>
+        <item>6:00AM&#8211;2:00PM</item>
+        <item>Free</item>
+        <item>Jalebi Chowk, Jai Niwas Garden, Jaipur, Rajasthan 302002</item>
+        <item>The Vaishnava temple Govind Dev Ji is situated in Jaipur district in Rajasthan state of India. It is located in the City Palace complex. Murti is easily visible from City Palace.</item>
+        <item>http://www.govinddevji.net/</item>
+    </string-array>
+
+    <!-- KRS Dam -->
+    <string-array name="nevta_dam">
+        <item>Nevta Dam</item>
+        <item>4</item>
+        <item>Dam/Heritage</item>
+        <item>@drawable/layer_pla_dammm</item>
+        <item>@drawable/nevta</item>
+        <item>6:30AM&#8211;9:00PM</item>
+        <item>Adult: ₹0\nChild: ₹0</item>
+        <item>Neota, Rajasthan 302029</item>
+        <item>Nevta (Neota) is an small village (Gram Panchayat) which comes under Tehsil Sanganer, Jaipur capital of Rajasthan.
+            Nevta dam is hidden beauty which is 17 kilometers from Muhana and 7 kms from Mansarovar.
+            Many people visit here and enjoy the beauty of the Nevta dam – Jaipur and greenery around it.</item>
+        <item>https://www.jaipurcityblog.com/nevta-dam-jaipur/</item>
+    </string-array>
+
+    <!-- Pushkar Temple -->
+    <string-array name="pushkar_temple">
+        <item>Pushkar Temple</item>
+        <item>4.7</item>
+        <item>Temple</item>
+        <item>@drawable/layer_pl_tem</item>
+        <item>@drawable/pushkari</item>
+        <item>6:00AM&#8211;1:00PM\n5:00PM&#8211;9:00PM\nClosed on Wednesdays</item>
+        <item>Free</item>
+        <item>Sri Ganapathi Sachchidananda Ashram, Datta Nagar, Mysuru, Karnataka, India</item>
+        <item>Jagatpita Brahma Mandir is a Hindu temple situated at Pushkar in the Indian state of Rajasthan, close to the sacred Pushkar Lake to which its legend has an indelible link. The temple is one of very few existing temples dedicated to the Hindu creator-god Brahma in India and remains the most prominent among them.</item>
+        <item>https://en.wikipedia.org/wiki/Brahma_Temple,_Pushkar</item>
+    </string-array>
+
+    <!-- GRS Fantasy ParkClass -->
+    <string-array name="funkingdom">
+        <item>Pink Pearl</item>
+        <item>4.1</item>
+        <item>Theme Park</item>
+        <item>@drawable/layer_pl_ter</item>
+        <item>@drawable/pinkper</item>
+        <item>10:30AM&#8211;7:30PM(Sun)\n10:30AM&#8211;6:00PM(Mon&#8211;Sat)</item>
+        <item>₹600 (varies based on age and height)</item>
+        <item>NH - 8, Ajmer-Jaipur Expressway Near Mahapura, Mod, Bhakrota, Jaipur, Rajasthan 302026</item>
+        <item>The Pink Pearl resort offers comfortable accommodation with state of art facilities to its guests. The reception is semi-circular with a glass wall overlooking the lawn. The lobby is comfortable, decorated with plush sofas neatly arranged so that a feeling of openness automatically comes to you upon entering. It is located conveniently too, en route to the Pink City Jaipur, only 15 kilometres short of the city landmark. The airport is 22 kilometres away and the railway station and bus stand is just 14 kilometres away. The business centre and shopping complex is also very close being only 6 kilometres away.</item>
+        <item>https://pinkpearl.co.in/</item>
+    </string-array>
+
+</resources>

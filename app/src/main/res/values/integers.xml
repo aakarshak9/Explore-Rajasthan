@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- =========================== -->
+    <!-- FOR THE PLACE LIST FRAGMENT -->
+    <!-- =========================== -->
+    <!-- Number of lines for the description in collapsed form -->
+    <integer name="place_list_item_description_collapsed_max_lines">3</integer>
+
+    <!-- ========================== -->
+    <!-- FOR THE PARK LIST FRAGMENT -->
+    <!-- ========================== -->
+    <!-- Number of lines for the description in collapsed form -->
+    <integer name="park_list_item_description_collapsed_max_lines">3</integer>
+
+
+</resources>

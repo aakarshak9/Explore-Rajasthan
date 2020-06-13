@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- This resource is used for storing the information for Parks -->
+
+    <!-- Template followed for the Parks data -->
+    <!--<string-array name="park_template">
+        <item>Name</item>
+        <item>Star Rating (in Number)</item>
+        <item>ParkClass Image (path to drawable)</item>
+        <item>Time info</item>
+        <item>Entry Fee</item>
+        <item>Location for Map</item>
+        <item>Brief description</item>
+        <item>Site link to more info</item>
+    </string-array>-->
+
+    <!-- Central ParkClass -->
+    <string-array name="central_park">
+        <item>Central Park</item>
+        <item>4.2</item>
+        <item>@drawable/centralp</item>
+        <item>7:00AM&#8211;8:00PM</item>
+        <item>Adult: ₹0\nChild: ₹0</item>
+        <item>Prithviraj Rd, Rambagh, Jaipur, Rajasthan 302007</item>
+        <item>Central Park, constructed by the Jaipur Development Authority is the largest parkClass in Jaipur, India. It is located, as its name suggests, in the centre of Jaipur city. Having a big lush green beautiful garden and Rambagh Polo Ground and golf club nearby makes it an enjoyable placeClass in Jaipur.</item>
+        <item>https://en.wikipedia.org/wiki/Central_Park,_Jaipur</item>
+    </string-array>
+
+    <!-- Saheliyon Ki Baari -->
+    <string-array name="saheliyon_ki_baari">
+        <item>Saheliyon Ki Baari</item>
+        <item>4.4</item>
+        <item>@drawable/saheliyon</item>
+        <item>8:30AM&#8211;5:30PM\nClosed on Tuesdays</item>
+        <item>Adult: ₹10\nChild(5&#8211;15years): ₹5\nSenior Citizens: ₹5\nVideo Camera: ₹25</item>
+        <item>Saheli Marg, New Fatehpura, Panchwati, Udaipur, Rajasthan 313001</item>
+        <item>Saheliyon-ki-Bari is a major garden and a popular tourist space in Udaipur in the Indian state of Rajasthan. It lies in northern part of the city and has fountains and kiosks, a lotus pool and marble elephants. It was built by Rana Sangram Singh. There is also a small museum here.</item>
+        <item>https://en.wikipedia.org/wiki/Saheliyon-ki-Bari</item>
+    </string-array>
+
+    <!-- Jawahar Circle -->
+    <string-array name="jawahar_circle">
+        <item>Jawahar Circle</item>
+        <item>4.0</item>
+        <item>@drawable/jawaharc</item>
+        <item>6:00AM&#8211;6:00PM</item>
+        <item>Free</item>
+        <item>Jawahar Circle, Malviya Nagar, Jaipur, Rajasthan 302017</item>
+        <item>Jawahar Circle is a garden situated in Jaipur city in the Indian state of Rajasthan, built by the Jaipur Development Authority.</item>
+        <item>https://en.wikipedia.org/wiki/Jawahar_Circle</item>
+    </string-array>
+
+    <!-- Ranthambore ParkClass -->
+    <string-array name="ranthambore_park">
+        <item>Ranthambore National Park</item>
+        <item>4.4</item>
+        <item>@drawable/rantham</item>
+        <item>6:00AM&#8211;10:00AM\n4:00PM&#8211;7:00PM</item>
+        <item>500</item>
+        <item>‎Ranthambore Sawai Madhopur, Rajasthan, India</item>
+        <item>Ranthambore National Park is a vast wildlife reserve near the town of Sawai Madhopur in Rajasthan, northern India. It is a former royal hunting ground and home to tigers, leopards and marsh crocodiles. Its landmarks include the imposing 10th-century Ranthambore Fort, on a hilltop, and the Ganesh Mandir temple. Also in the parkClass, Padam Talao Lake is known for its abundance of water lilies.</item>
+        <item>https://www.ranthamborenationalpark.com/</item>
+    </string-array>
+
+    <!-- Sariska ParkClass -->
+    <string-array name="sariska_tiger_park">
+        <item>Sariska Tiger Park</item>
+        <item>4.5</item>
+        <item>@drawable/sariskatiger</item>
+        <item>9:30AM&#8211;1:00PM\n3:30PM&#8211;5:30PM\nClosed on Wednesdays</item>
+        <item>₹500</item>
+        <item>Subhash Chowk Station road malakhera, Alwar, Rajasthan 301406</item>
+        <item>Sariska Tiger Reserve is a tiger reserve in Alwar district, Rajasthan, India. It stretches over an area of 881 km² comprising scrub-thorn arid forests, dry deciduous forests, grasslands, and rocky hills. This area was a hunting preserve of the Alwar state and was declared a wildlife reserve in 1955.</item>
+        <item>https://www.sariskanationalpark.com/</item>
+    </string-array>
+
+    <!-- Desert National ParkClass -->
+    <string-array name="desert_national_park">
+        <item>Desert National Park</item>
+        <item>4.6</item>
+        <item>@drawable/desertnational</item>
+        <item>9:30AM&#8211;12:30PM\n3:30PM&#8211;5:30PM\nClosed on Wednesdays</item>
+        <item>250</item>
+        <item>Myajlar Road, Jaisalmer, Rajasthan 345001</item>
+        <item>Desert National Park, Rajasthan, India, is situated in the west Indian state of Rajasthan near the towns of Jaisalmer and Barmer. This is one of the largest national parkClasses, covering an area of 3162 km square. The Desert National Park is an excellent example of the ecosystem of the Thar Desert.</item>
+        <item>https://en.wikipedia.org/wiki/Desert_National_Park</item>
+    </string-array>
+
+    <!-- Nahargarh Bio ParkClass -->
+    <string-array name="nahargarh_bio_park">
+        <item>Nahargarh Bio Park</item>
+        <item>4.0</item>
+        <item>@drawable/nahargarhbi</item>
+        <item>9:00AM&#8211;8:00PM</item>
+        <item>₹50</item>
+        <item>NH 8, Kukas, Rajasthan 302028</item>
+        <item>Nahargarh Biological Park, a part of the Nahargarh sanctuary is located about 12 km from Jaipur on the Jaipur-Delhi highway. It encompasses a large area of 720 hectares and is situated under the Aravalli range. The Park is famous for its vast flora and fauna, and its main aim is to conserve it. It also doubles up as a great placeClass to educate people and conduct research on existing flora and fauna.</item>
+        <item>http://www.tourism.rajasthan.gov.in/nahargarh-biological-parkClass.html</item>
+    </string-array>
+
+    <!-- Fateh Sagar Lake -->
+    <string-array name="fateh_sagar_lake">
+        <item>Fateh Sagar Park</item>
+        <item>4.1</item>
+        <item>@drawable/fatehsagar</item>
+        <item>7:00AM&#8211;6:30PM</item>
+        <item>Free</item>
+        <item>Udaipur, Rajasthan</item>
+        <item>Fateh Sagar Lake is situated in the city of Udaipur in the Indian state of Rajasthan. It is an artificial lake named after Maharana Fateh Singh of Udaipur and Mewar, constructed north-west of Udaipur, to the north of Lake Pichola in the 1680s.</item>
+        <item>https://udaipurtourism.co.in/lake-fatehsagar-udaipur</item>
+    </string-array>
+
+</resources>

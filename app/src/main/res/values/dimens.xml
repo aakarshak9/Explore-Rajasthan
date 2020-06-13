@@ -1,0 +1,119 @@
+<resources>
+    <!-- MATCH CONSTRAINT Dimension used for ConstraintLayouts -->
+    <dimen name="match_constraint_0dp">0dp</dimen>
+
+    <!-- ========================= -->
+    <!-- FOR ALL DESIGN COMPONENTS -->
+    <!-- ========================= -->
+    <dimen name="btn_material_size">48dp</dimen>
+    <dimen name="btn_material_margin">8dp</dimen>
+    <dimen name="app_bar_no_elevation">0dp</dimen>
+
+    <!-- For All Label Buttons -->
+    <dimen name="btn_label_material_height">36dp</dimen>
+    <dimen name="btn_label_material_min_width">64dp</dimen>
+    <dimen name="btn_label_material_padding_left">8dp</dimen>
+    <dimen name="btn_label_material_padding_right">8dp</dimen>
+
+    <!-- For the Common Card used in the app -->
+    <dimen name="card_all_corner_radius">4dp</dimen>
+
+    <!-- ========================= -->
+    <!-- FOR ALL COMMON COMPONENTS -->
+    <!-- ========================= -->
+    <!-- Common spacing applied between the items in a RecyclerView List -->
+    <dimen name="all_list_items_spacing">4dp</dimen>
+
+    <dimen name="divider_all_list_item_actions_height">1dp</dimen>
+    <dimen name="all_list_item_icon_size">24dp</dimen>
+    <dimen name="all_list_item_timings_info_margin">8dp</dimen>
+    <dimen name="all_list_item_cost_info_margin">8dp</dimen>
+    <dimen name="all_list_item_phone_info_margin">8dp</dimen>
+    <dimen name="all_list_item_location_info_margin">8dp</dimen>
+
+    <!-- =========================== -->
+    <!-- FOR THE COMMON CONTENT PAGE -->
+    <!-- =========================== -->
+    <dimen name="guideline_content_page_horizontal_keyline">8dp</dimen>
+    <dimen name="recyclerview_content_page_padding_vertical">16dp</dimen>
+
+    <!-- =========================== -->
+    <!-- FOR THE PLACE LIST FRAGMENT -->
+    <!-- =========================== -->
+    <dimen name="guideline_place_list_item_horizontal_keyline">16dp</dimen>
+    <dimen name="image_place_list_item_type_size">40dp</dimen>
+    <dimen name="place_list_item_content_margin">16dp</dimen>
+    <dimen name="text_place_list_item_types_margin_top">4dp</dimen>
+    <dimen name="ratingbar_place_list_item_rating_margin_left">4dp</dimen>
+    <dimen name="text_place_list_item_description_size">16sp</dimen>
+    <dimen name="place_list_item_content_half_margin">8dp</dimen>
+    <dimen name="ratingbar_place_list_item_rating_padding">2dp</dimen>
+
+    <!-- ========================== -->
+    <!-- FOR THE PARK LIST FRAGMENT -->
+    <!-- ========================== -->
+    <dimen name="guideline_park_list_item_horizontal_keyline">16dp</dimen>
+    <dimen name="park_list_item_content_margin">16dp</dimen>
+    <dimen name="park_list_item_content_half_margin">8dp</dimen>
+    <dimen name="text_park_list_item_rating_value_margin_top">4dp</dimen>
+    <dimen name="ratingbar_park_list_item_rating_padding">2dp</dimen>
+    <dimen name="text_park_list_item_title_margin_bottom">34dp</dimen>
+    <dimen name="text_park_list_item_title_padding_vertical">2dp</dimen>
+    <dimen name="text_park_list_item_title_padding_horizontal">4dp</dimen>
+    <dimen name="text_park_list_item_rating_value_padding_vertical">1dp</dimen>
+    <dimen name="text_park_list_item_rating_value_padding_left">4dp</dimen>
+    <dimen name="text_park_list_item_rating_value_padding_right">2dp</dimen>
+
+    <!-- =========================== -->
+    <!-- FOR THE HOTEL LIST FRAGMENT -->
+    <!-- =========================== -->
+    <dimen name="guideline_hotel_list_item_horizontal_keyline">16dp</dimen>
+    <dimen name="hotel_list_item_content_margin">16dp</dimen>
+    <dimen name="hotel_list_item_content_half_margin">8dp</dimen>
+    <dimen name="image_hotel_list_item_star_type_size">40dp</dimen>
+    <dimen name="text_hotel_list_item_rating_value_margin_top">4dp</dimen>
+    <dimen name="ratingbar_hotel_list_item_rating_padding">2dp</dimen>
+    <dimen name="ratingbar_hotel_list_item_rating_margin_left">4dp</dimen>
+
+    <!-- ================================ -->
+    <!-- FOR THE RESTAURANT LIST FRAGMENT -->
+    <!-- ================================ -->
+    <dimen name="guideline_restaurant_list_item_horizontal_keyline">16dp</dimen>
+    <dimen name="restaurant_list_item_content_margin">16dp</dimen>
+    <dimen name="restaurant_list_item_content_half_margin">8dp</dimen>
+    <dimen name="text_restaurant_list_item_rating_value_margin_top">4dp</dimen>
+    <dimen name="ratingbar_restaurant_list_item_rating_padding">2dp</dimen>
+    <dimen name="text_restaurant_list_item_title_margin_bottom">34dp</dimen>
+    <dimen name="text_restaurant_list_item_title_padding_vertical">2dp</dimen>
+    <dimen name="text_restaurant_list_item_title_padding_horizontal">4dp</dimen>
+    <dimen name="text_restaurant_list_item_rating_value_padding_vertical">1dp</dimen>
+    <dimen name="text_restaurant_list_item_rating_value_padding_left">4dp</dimen>
+    <dimen name="text_restaurant_list_item_rating_value_padding_right">2dp</dimen>
+
+    <!-- ========================== -->
+    <!-- FOR THE SHOP LIST FRAGMENT -->
+    <!-- ========================== -->
+    <dimen name="guideline_shop_list_item_horizontal_keyline">16dp</dimen>
+    <dimen name="shop_list_item_content_margin">16dp</dimen>
+    <dimen name="shop_list_item_content_half_margin">8dp</dimen>
+    <dimen name="text_shop_list_item_rating_value_padding_vertical">1dp</dimen>
+    <dimen name="text_shop_list_item_rating_value_padding_left">4dp</dimen>
+    <dimen name="text_shop_list_item_rating_value_padding_right">2dp</dimen>
+    <dimen name="ratingbar_shop_list_item_rating_padding">2dp</dimen>
+    <dimen name="text_shop_list_item_rating_type_separator_padding_vertical">1dp</dimen>
+    <dimen name="text_shop_list_item_type_padding_vertical">1dp</dimen>
+    <dimen name="text_shop_list_item_type_padding_left">2dp</dimen>
+    <dimen name="text_shop_list_item_type_padding_right">4dp</dimen>
+
+    <!-- ====================== -->
+    <!-- FOR THE ABOUT ACTIVITY -->
+    <!-- ====================== -->
+    <dimen name="card_about_info_corner_radius">8dp</dimen>
+    <dimen name="card_about_info_elevation">6dp</dimen>
+    <dimen name="scrollview_about_content_padding">12dp</dimen>
+    <dimen name="card_about_internal_content_margin">12dp</dimen>
+    <dimen name="text_about_content_title_size">32sp</dimen>
+    <dimen name="text_about_content_size">16sp</dimen>
+    <dimen name="image_about_bio_icon_size">56dp</dimen>
+
+</resources>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BaseCardLightStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_park_list_item_left_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/guideline_park_list_item_horizontal_keyline" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_park_list_item_right_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/guideline_park_list_item_horizontal_keyline" />
+
+        <ImageView
+            android:id="@+id/image_park_list_item_photo"
+            style="@style/ParkListItemPhotoStyle"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,MissingConstraints"
+            tools:src="@drawable/layer_def_pic" />
+
+        <TextView
+            android:id="@+id/text_park_list_item_title"
+            style="@style/ParkListItemTitleStyle"
+            android:layout_marginStart="@dimen/park_list_item_content_margin"
+            android:layout_marginLeft="@dimen/park_list_item_content_margin"
+            android:layout_marginEnd="@dimen/park_list_item_content_margin"
+            android:layout_marginRight="@dimen/park_list_item_content_margin"
+            android:layout_marginBottom="@dimen/text_park_list_item_title_margin_bottom"
+            android:background="@color/parkListItemImageTextOverlayBackgroundColor"
+            android:paddingStart="@dimen/text_park_list_item_title_padding_horizontal"
+            android:paddingLeft="@dimen/text_park_list_item_title_padding_horizontal"
+            android:paddingTop="@dimen/text_park_list_item_title_padding_vertical"
+            android:paddingEnd="@dimen/text_park_list_item_title_padding_horizontal"
+            android:paddingRight="@dimen/text_park_list_item_title_padding_horizontal"
+            android:paddingBottom="@dimen/text_park_list_item_title_padding_vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/image_park_list_item_photo"
+            app:layout_constraintEnd_toEndOf="@+id/image_park_list_item_photo"
+            app:layout_constraintLeft_toLeftOf="@+id/image_park_list_item_photo"
+            app:layout_constraintRight_toRightOf="@+id/image_park_list_item_photo"
+            app:layout_constraintStart_toStartOf="@+id/image_park_list_item_photo"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/text_park_list_item_rating_value"
+            style="@style/ParkListItemRatingValueStyle"
+            android:layout_marginTop="@dimen/text_park_list_item_rating_value_margin_top"
+            android:background="@color/parkListItemImageTextOverlayBackgroundColor"
+            android:paddingStart="@dimen/text_park_list_item_rating_value_padding_left"
+            android:paddingLeft="@dimen/text_park_list_item_rating_value_padding_left"
+            android:paddingTop="@dimen/text_park_list_item_rating_value_padding_vertical"
+            android:paddingEnd="@dimen/text_park_list_item_rating_value_padding_right"
+            android:paddingRight="@dimen/text_park_list_item_rating_value_padding_right"
+            android:paddingBottom="@dimen/text_park_list_item_rating_value_padding_vertical"
+            app:layout_constraintLeft_toLeftOf="@+id/text_park_list_item_title"
+            app:layout_constraintStart_toStartOf="@+id/text_park_list_item_title"
+            app:layout_constraintTop_toBottomOf="@+id/text_park_list_item_title"
+            tools:text="4.5" />
+
+        <RatingBar
+            android:id="@+id/ratingbar_park_list_item_rating"
+            style="@style/SmallRatingBarStyle"
+            android:layout_height="@dimen/match_constraint_0dp"
+            android:background="@color/parkListItemImageTextOverlayBackgroundColor"
+            android:padding="@dimen/ratingbar_park_list_item_rating_padding"
+            app:layout_constraintBottom_toBottomOf="@+id/text_park_list_item_rating_value"
+            app:layout_constraintEnd_toEndOf="@+id/image_park_list_item_photo"
+            app:layout_constraintLeft_toRightOf="@+id/text_park_list_item_rating_value"
+            app:layout_constraintRight_toRightOf="@+id/image_park_list_item_photo"
+            app:layout_constraintStart_toEndOf="@+id/text_park_list_item_rating_value"
+            app:layout_constraintTop_toTopOf="@+id/text_park_list_item_rating_value"
+            tools:rating="4.5" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_park_list_item_center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/image_park_list_item_access_time"
+            style="@style/AllAccessTimeIconStyle"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_park_list_item_left_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_park_list_item_left_vertical"
+            app:layout_constraintTop_toTopOf="@+id/text_park_list_item_access_time"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/text_park_list_item_access_time"
+            style="@style/AllTimingsInfoStyle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_park_list_item_center_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_park_list_item_access_time"
+            app:layout_constraintRight_toRightOf="@+id/guideline_park_list_item_center_vertical"
+            app:layout_constraintStart_toEndOf="@+id/image_park_list_item_access_time"
+            app:layout_constraintTop_toBottomOf="@+id/image_park_list_item_photo"
+            tools:text="06:00AM&#8211;01:00PM\n05:00PM&#8211;09:00PM\nClosed on Wednesdays" />
+
+        <ImageView
+            android:id="@+id/image_park_list_item_entry_fee"
+            style="@style/AllCostIconStyle"
+            android:layout_marginStart="@dimen/park_list_item_content_half_margin"
+            android:layout_marginLeft="@dimen/park_list_item_content_half_margin"
+            android:contentDescription="TODO"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_park_list_item_center_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_park_list_item_center_vertical"
+            app:layout_constraintTop_toTopOf="@+id/text_park_list_item_entry_fee"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <TextView
+            android:id="@+id/text_park_list_item_entry_fee"
+            style="@style/AllCostInfoStyle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_park_list_item_right_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_park_list_item_entry_fee"
+            app:layout_constraintRight_toRightOf="@+id/guideline_park_list_item_right_vertical"
+            app:layout_constraintStart_toEndOf="@+id/image_park_list_item_entry_fee"
+            app:layout_constraintTop_toBottomOf="@+id/image_park_list_item_photo"
+            tools:text="Adult: ₹50,\n₹60 (Weekend)\nChild (5&#8211;12 yr): ₹20,\n₹30 (Weekend)" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier_park_list_item_time_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="text_park_list_item_access_time,text_park_list_item_entry_fee" />
+
+        <TextView
+            android:id="@+id/text_park_list_item_description"
+            style="@style/ParkListItemDescriptionStyle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_park_list_item_right_vertical"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_park_list_item_left_vertical"
+            app:layout_constraintRight_toRightOf="@+id/guideline_park_list_item_right_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_park_list_item_left_vertical"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_park_list_item_time_fee"
+            tools:text="@tools:sample/lorem/random" />
+
+        <ImageView
+            android:id="@+id/image_park_list_item_location"
+            style="@style/AllLocationIconStyle"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_park_list_item_left_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_park_list_item_left_vertical"
+            app:layout_constraintTop_toTopOf="@+id/text_park_list_item_location"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/text_park_list_item_location"
+            style="@style/AllLocationInfoStyle"
+            android:layout_marginTop="@dimen/park_list_item_content_margin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_park_list_item_right_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_park_list_item_location"
+            app:layout_constraintRight_toRightOf="@+id/guideline_park_list_item_right_vertical"
+            app:layout_constraintStart_toEndOf="@+id/image_park_list_item_location"
+            app:layout_constraintTop_toBottomOf="@+id/text_park_list_item_description"
+            tools:text="Bonsai garden, Sri Ganapati Sachchidananda Ashrama, Ooty Rd, Datta Nagar, Mysuru, Karnataka" />
+
+        <android.support.constraint.Group
+            android:id="@+id/group_park_list_item_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="image_park_list_item_location,text_park_list_item_location"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/divider_park_list_item_actions"
+            style="@style/ParkListItemDividerStyle"
+            android:layout_marginTop="@dimen/park_list_item_content_margin"
+            app:layout_constraintTop_toBottomOf="@+id/text_park_list_item_location" />
+
+        <Button
+            android:id="@+id/btn_park_list_item_expand_collapse"
+            style="@style/AllExpandCollapseButtonStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_park_list_item_actions" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_park_list_item_location"
+            style="@style/MaterialActionImageButtonStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_park_list_item_actions"
+            app:srcCompat="@drawable/ic_all_map_marker"
+            tools:ignore="ContentDescription" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

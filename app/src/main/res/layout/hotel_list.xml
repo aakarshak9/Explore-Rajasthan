@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BaseCardLightStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_hotel_list_item_left_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/guideline_hotel_list_item_horizontal_keyline" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_hotel_list_item_right_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/guideline_hotel_list_item_horizontal_keyline" />
+
+        <View
+            android:id="@+id/view_hotel_list_item_top_ribbon"
+            style="@style/ConstraintTopCenterHorizontalStyle"
+            android:layout_width="@dimen/match_constraint_0dp"
+            android:layout_height="@dimen/match_constraint_0dp"
+            app:layout_constraintBottom_toTopOf="@+id/image_hotel_list_item_photo"
+            tools:background="@color/colorPrimary"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/image_hotel_list_item_star_type"
+            android:layout_width="@dimen/image_hotel_list_item_star_type_size"
+            android:layout_height="@dimen/image_hotel_list_item_star_type_size"
+            app:layout_constraintBottom_toBottomOf="@+id/text_hotel_list_item_rating_value"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_hotel_list_item_left_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_hotel_list_item_left_vertical"
+            app:layout_constraintTop_toTopOf="@+id/text_hotel_list_item_title"
+            tools:ignore="ContentDescription"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/text_hotel_list_item_title"
+            style="@style/HotelListItemTitleStyle"
+            android:layout_marginStart="@dimen/hotel_list_item_content_margin"
+            android:layout_marginLeft="@dimen/hotel_list_item_content_margin"
+            android:layout_marginTop="@dimen/hotel_list_item_content_margin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_hotel_list_item_right_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_hotel_list_item_star_type"
+            app:layout_constraintRight_toRightOf="@+id/guideline_hotel_list_item_right_vertical"
+            app:layout_constraintStart_toEndOf="@+id/image_hotel_list_item_star_type"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/full_names" />
+
+        <TextView
+            android:id="@+id/text_hotel_list_item_rating_value"
+            style="@style/HotelListItemRatingValueStyle"
+            android:layout_marginTop="@dimen/text_hotel_list_item_rating_value_margin_top"
+            app:layout_constraintLeft_toLeftOf="@+id/text_hotel_list_item_title"
+            app:layout_constraintStart_toStartOf="@+id/text_hotel_list_item_title"
+            app:layout_constraintTop_toBottomOf="@+id/text_hotel_list_item_title"
+            tools:text="4.5" />
+
+        <RatingBar
+            android:id="@+id/ratingbar_hotel_list_item_rating"
+            style="@style/SmallRatingBarStyle"
+            android:layout_marginStart="@dimen/ratingbar_hotel_list_item_rating_margin_left"
+            android:layout_marginLeft="@dimen/ratingbar_hotel_list_item_rating_margin_left"
+            android:background="@color/hotelListItemRatingBackgroundColor"
+            android:padding="@dimen/ratingbar_hotel_list_item_rating_padding"
+            app:layout_constraintBottom_toBottomOf="@+id/text_hotel_list_item_rating_value"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_hotel_list_item_right_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/text_hotel_list_item_rating_value"
+            app:layout_constraintStart_toEndOf="@+id/text_hotel_list_item_rating_value"
+            app:layout_constraintTop_toTopOf="@+id/text_hotel_list_item_rating_value"
+            tools:rating="4.5" />
+
+        <android.widget.Space
+            android:id="@+id/space_hotel_list_item_photo_top"
+            style="@style/ConstraintCenterHorizontalStyle"
+            android:layout_width="@dimen/match_constraint_0dp"
+            android:layout_height="@dimen/hotel_list_item_content_margin"
+            app:layout_constraintTop_toBottomOf="@+id/text_hotel_list_item_rating_value"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/image_hotel_list_item_photo"
+            style="@style/HotelListItemPhotoStyle"
+            app:layout_constraintTop_toBottomOf="@+id/space_hotel_list_item_photo_top"
+            tools:ignore="ContentDescription,MissingConstraints"
+            tools:src="@drawable/layer_def_pic" />
+
+        <ImageView
+            android:id="@+id/image_hotel_list_item_cost"
+            style="@style/AllCostIconStyle"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_hotel_list_item_left_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_hotel_list_item_left_vertical"
+            app:layout_constraintTop_toTopOf="@+id/text_hotel_list_item_cost"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/text_hotel_list_item_cost"
+            style="@style/AllCostInfoStyle"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_hotel_list_item_right_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_hotel_list_item_cost"
+            app:layout_constraintRight_toRightOf="@+id/guideline_hotel_list_item_right_vertical"
+            app:layout_constraintStart_toEndOf="@+id/image_hotel_list_item_cost"
+            app:layout_constraintTop_toBottomOf="@+id/image_hotel_list_item_photo"
+            tools:text="₹6500 (2 adults per Night)" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline_hotel_list_item_center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/image_hotel_list_item_contact"
+            style="@style/AllPhoneIconStyle"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_hotel_list_item_left_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_hotel_list_item_left_vertical"
+            app:layout_constraintTop_toTopOf="@+id/text_hotel_list_item_contact"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/text_hotel_list_item_contact"
+            style="@style/AllPhoneInfoStyle"
+            android:layout_marginTop="@dimen/hotel_list_item_content_margin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_hotel_list_item_center_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_hotel_list_item_contact"
+            app:layout_constraintRight_toRightOf="@+id/guideline_hotel_list_item_center_vertical"
+            app:layout_constraintStart_toEndOf="@+id/image_hotel_list_item_contact"
+            app:layout_constraintTop_toBottomOf="@+id/text_hotel_list_item_cost"
+            tools:text="@tools:sample/us_phones" />
+
+        <ImageView
+            android:id="@+id/image_hotel_list_item_location"
+            style="@style/AllLocationIconStyle"
+            android:layout_marginStart="@dimen/hotel_list_item_content_half_margin"
+            android:layout_marginLeft="@dimen/hotel_list_item_content_half_margin"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline_hotel_list_item_center_vertical"
+            app:layout_constraintStart_toStartOf="@+id/guideline_hotel_list_item_center_vertical"
+            app:layout_constraintTop_toTopOf="@+id/text_hotel_list_item_location"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/text_hotel_list_item_location"
+            style="@style/AllLocationInfoStyle"
+            android:layout_marginTop="@dimen/hotel_list_item_content_margin"
+            app:layout_constraintEnd_toEndOf="@+id/guideline_hotel_list_item_right_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/image_hotel_list_item_location"
+            app:layout_constraintRight_toRightOf="@+id/guideline_hotel_list_item_right_vertical"
+            app:layout_constraintStart_toEndOf="@+id/image_hotel_list_item_location"
+            app:layout_constraintTop_toBottomOf="@+id/text_hotel_list_item_cost"
+            tools:text="The Quorum, 2257/,B&#8211;1,/1 1318, Vinoba Road, Near Kala Mandir, Devaraja Mohalla-1, CFTRI Campus, Kajjihundi, Mysuru, Karnataka" />
+
+        <android.support.constraint.Group
+            android:id="@+id/group_hotel_list_item_contact_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="image_hotel_list_item_contact,text_hotel_list_item_contact,image_hotel_list_item_location,text_hotel_list_item_location"
+            tools:visibility="visible" />
+
+        <android.support.constraint.Barrier
+            android:id="@+id/barrier_hotel_list_item_contact_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="text_hotel_list_item_contact,text_hotel_list_item_location" />
+
+        <View
+            android:id="@+id/divider_hotel_list_item_actions"
+            style="@style/HotelListItemDividerStyle"
+            android:layout_marginTop="@dimen/hotel_list_item_content_margin"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_hotel_list_item_contact_location" />
+
+        <Button
+            android:id="@+id/btn_hotel_list_item_expand_collapse"
+            style="@style/AllExpandCollapseButtonStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_hotel_list_item_actions" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_hotel_list_item_location"
+            style="@style/MaterialActionImageButtonStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_hotel_list_item_actions"
+            app:srcCompat="@drawable/ic_all_map_marker"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_hotel_list_item_contact"
+            style="@style/MaterialActionImageButtonStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgbtn_hotel_list_item_location"
+            app:layout_constraintRight_toLeftOf="@+id/imgbtn_hotel_list_item_location"
+            app:layout_constraintTop_toBottomOf="@+id/divider_hotel_list_item_actions"
+            app:srcCompat="@drawable/ic_all_call"
+            tools:ignore="ContentDescription" />
+
+        <android.support.constraint.Group
+            android:id="@+id/group_hotel_list_item_imgbtn_actions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="imgbtn_hotel_list_item_location,imgbtn_hotel_list_item_contact" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

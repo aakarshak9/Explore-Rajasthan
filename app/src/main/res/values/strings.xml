@@ -1,0 +1,74 @@
+<resources>
+    <!-- Name of the App -->
+    <string name="app_name">Explore-Rajasthan</string>
+
+    <!-- List of Titles for the Bottom Navigation Menu items -->
+    <string name="places_nav">Places</string>
+    <string name="parks_nav">Parks</string>
+    <string name="hotels_nav">Hotels</string>
+    <string name="resto_nav">Restaurants</string>
+    <string name="Shops_nav">Shops</string>
+
+    <!-- Common Bullet Mark Text -->
+    <string name="bullet_marks" translatable="false">\t \u2022 \t</string>
+
+    <!-- Common Action labels -->
+    <string name="expand_action">Expand</string>
+    <string name="collapse_action">Collapse</string>
+    <string name="refresh_action">Refresh</string>
+
+    <!-- Common Snackbar Actions -->
+    <string name="action_snackbar">OK</string>
+
+    <!-- Common Errors -->
+    <string name="no_link_error">No link available!</string>
+    <string name="all_error_link">No contact available!</string>
+
+    <!-- Common Chooser Titles -->
+    <string name="all_location_title">Share the location address with …</string>
+    <string name="all_contact_title">Share the contact number with …</string>
+
+    <!-- =================================== -->
+    <!-- STRINGS USED IN PLACE LIST FRAGMENT -->
+    <!-- =================================== -->
+    <string name="place_load_error">Error while loading list of Places. Click on Refresh button to reload.</string>
+
+    <!-- ================================== -->
+    <!-- STRINGS USED IN PARK LIST FRAGMENT -->
+    <!-- ================================== -->
+    <string name="park_load_error">Error while loading list of Parks. Click on Refresh button to reload.</string>
+
+    <!-- =================================== -->
+    <!-- STRINGS USED IN HOTEL LIST FRAGMENT -->
+    <!-- =================================== -->
+    <string name="hotel_load_error">Error while loading list of Hotels. Click on Refresh button to reload.</string>
+
+    <!-- ======================================== -->
+    <!-- STRINGS USED IN RESTAURANT LIST FRAGMENT -->
+    <!-- ======================================== -->
+    <string name="resoto_load_error">Error while loading list of Restaurants. Click on Refresh button to reload.</string>
+
+    <!-- ================================== -->
+    <!-- STRINGS USED IN SHOP LIST FRAGMENT -->
+    <!-- ================================== -->
+    <string name="shop_load_error">Error while loading list of Shops. Click on Refresh button to reload.</string>
+
+    <!-- ============================== -->
+    <!-- STRINGS USED IN ABOUT ACTIVITY -->
+    <!-- ============================== -->
+    <string name="title_about">About us</string>
+    <!-- For the introductory text about the App -->
+    <string name="content_intro">App designed and developed by &lt;b&gt;Aakarshak Sharma&lt;/b&gt; as part of the project coursework done for the &lt;b&gt;Android Basics Nanodegree&lt;/b&gt; course offered by &lt;b&gt;Udacity&lt;/b&gt;.</string>
+    <!-- For the brief description text about the App -->
+    <string name="content_desc">
+        This is a Tour Guide App to guide the user in exploring the &lt;b&gt;&quot;City of Palaces&quot;/&quot;Rajasthan&quot;/&quot;Rajasthan&quot;&lt;/b&gt;. App lists top &lt;b&gt;Places&lt;/b&gt; and &lt;b&gt;Parks&lt;/b&gt; to visit, best &lt;b&gt;Hotels&lt;/b&gt; to stay, some good &lt;b&gt;Restaurants&lt;/b&gt; for foodies and nice &lt;b&gt;Shopping&lt;/b&gt; destinations.
+        &lt;br/&gt;&lt;br/&gt;App Icon, the vector illustration of Rajasthan, is a beautiful work of &lt;a href=&quot;https://dribbble.com/shots/10514651-Learning-to-Balance&quot;&gt;Ranganath Krishnamani&lt;/a&gt;. Do check out other designs by his famous team &lt;a href=&quot;http://www.liquidink.design/about&quot;&gt;Liquid Ink&lt;/a&gt;.&lt;br/&gt;
+    </string>
+    <!-- Link to the course -->
+    <string name="udacity_link" translatable="false">https://in.udacity.com/course/android-basics-nanodegree-by-google--nd803</string>
+    <!-- Link to the developer's portfolio -->
+    <string name="github_link" translatable="false">https://github.com/aakarshak9</string>
+    <!-- Link to the developer's bio -->
+    <string name="linkedin_link" translatable="false">www.linkedin.com/in/aakarshak-sharma9</string>
+
+</resources>

@@ -1,6 +1,6 @@
 <resources>
     <!-- Name of the App -->
-    <string name="app_name">Explore-Rajasthan</string>
+    <string name="app_name">Aapno Rajasthan</string>
 
     <!-- List of Titles for the Bottom Navigation Menu items -->
     <string name="places_nav">Places</string>

@@ -3,9 +3,9 @@
     <!-- ================ -->
     <!-- APP THEME COLORS -->
     <!-- ================ -->
-    <color name="colorPrimary">#07006C</color>
-    <color name="colorPrimaryDark">#3537C1</color>
-    <color name="colorAccent">#868ED6</color>
+    <color name="colorPrimary">#2E2E32</color>
+    <color name="colorPrimaryDark">#2E2E32</color>
+    <color name="colorAccent">#EFF0F3</color>
 
     <!-- ============= -->
     <!-- COMMON COLORS -->
@@ -15,38 +15,33 @@
     <!-- ========================== -->
     <!-- PLACE LIST FRAGMENT COLORS -->
     <!-- ========================== -->
-    <color name="placeListBackgroundColor">#1B7CA3</color>
-    <color name="placeListItemRatingBackgroundColor">#483D7E83</color>
+    <color name="placeListBackgroundColor">#434245</color>
 
     <!-- ========================= -->
     <!-- PARK LIST FRAGMENT COLORS -->
     <!-- ========================= -->
-    <color name="parkListBackgroundColor">#31BA1A</color>
-    <color name="parkListItemImageTextOverlayBackgroundColor">#80849C76</color>
+    <color name="parkListBackgroundColor">#434245</color>
 
     <!-- ========================== -->
     <!-- HOTEL LIST FRAGMENT COLORS -->
     <!-- ========================== -->
-    <color name="hotelListBackgroundColor">#DDD521</color>
-    <color name="hotelListItemRatingBackgroundColor">#48000000</color>
+    <color name="hotelListBackgroundColor">#434245</color>
 
     <!-- =============================== -->
     <!-- RESTAURANT LIST FRAGMENT COLORS -->
     <!-- =============================== -->
-    <color name="restaurantListBackgroundColor">#F18A05</color>
-    <color name="restaurantListItemImageTextOverlayBackgroundColor">#80916B3F</color>
+    <color name="restaurantListBackgroundColor">#434245</color>
 
     <!-- ========================= -->
     <!-- SHOP LIST FRAGMENT COLORS -->
     <!-- ========================= -->
-    <color name="shopListBackgroundColor">#672206</color>
-    <color name="shopListItemImageTextOverlayBackgroundColor">#800B0808</color>
+    <color name="shopListBackgroundColor">#434245</color>
 
     <!-- ===================== -->
     <!-- ABOUT ACTIVITY COLORS -->
     <!-- ===================== -->
-    <color name="aboutContentTextColor">#FF5900</color>
-    <color name="aboutInfoCardBackgroundColor">#7077A1</color>
-    <color name="aboutContentLinkTextColor">#0000b5</color>
+    <color name="aboutContentTextColor">#F6F7FA</color>
+    <color name="aboutInfoCardBackgroundColor">#040404</color>
+    <color name="aboutContentLinkTextColor">#A0A0B5</color>
 
 </resources>

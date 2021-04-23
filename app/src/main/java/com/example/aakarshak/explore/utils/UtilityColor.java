@@ -2,30 +2,18 @@ package com.example.aakarshak.explore.utils;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.ArrayRes;
-import android.support.annotation.ColorRes;
-import android.support.v4.content.ContextCompat;
+
+import androidx.annotation.ArrayRes;
+import androidx.annotation.ColorRes;
+import androidx.core.content.ContextCompat;
 
 public class UtilityColor {
 
-    /**
-     * Private Constructor to avoid direct instantiation of {@link UtilityColor}
-     */
     private UtilityColor() {
         //Suppressing with an error to enforce noninstantiability
         throw new AssertionError("No " + this.getClass().getCanonicalName() + " instances for you!");
     }
 
-    /**
-     * Method that reads the Typed Array {@code colorArrayRes} and returns an Integer Array of Colors read.
-     *
-     * @param context         The {@link Context} to use for reading the {@link TypedArray}
-     *                        and retrieving the Colors from Color Resource {@link ColorRes}
-     * @param colorArrayRes   The {@link TypedArray} resource of Colors to be read
-     * @param defaultColorRes The Integer value of the Color Resource {@link ColorRes} to use as a default Color
-     *                        in case when an attribute cannot be read from TypedArray or is not a defined resource.
-     * @return Integer array of the Colors read from the {@link TypedArray}
-     */
     public static int[] obtainColorsFromTypedArray(Context context, @ArrayRes int colorArrayRes, @ColorRes int defaultColorRes) {
         //Obtaining the Typed Array of Colors from the Resources
         TypedArray typedArrayColors = context.getResources().obtainTypedArray(colorArrayRes);

@@ -4,9 +4,10 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.support.annotation.ArrayRes;
-import android.support.annotation.NonNull;
-import android.support.v7.graphics.Palette;
+
+import androidx.annotation.ArrayRes;
+import androidx.annotation.NonNull;
+import androidx.palette.graphics.Palette;
 
 import com.example.aakarshak.explore.R;
 import com.example.aakarshak.explore.data.IResourceClassRepo;
@@ -38,27 +39,12 @@ public class ResourceClass implements IResourceClassRepo {
     //Execute instance for threading requests
     private final Execute mExecute;
 
-    /**
-     * Private Constructor of {@link ResourceClass}
-     *
-     * @param packageName The name of this application's package.
-     * @param resources   Instance of {@link Resources}
-     * @param execute     Instance of {@link Execute} for threading requests
-     */
     private ResourceClass(@NonNull String packageName, @NonNull Resources resources, @NonNull Execute execute) {
         mAppPackageName = packageName;
         mResources = resources;
         mExecute = execute;
     }
 
-    /**
-     * Singleton Constructor that creates a single instance of {@link ResourceClass}
-     *
-     * @param packageName The name of this application's package.
-     * @param resources   Instance of {@link Resources}
-     * @param execute     Instance of {@link Execute} for threading requests
-     * @return New or existing instance of {@link ResourceClass}
-     */
     public static ResourceClass getInstance(@NonNull String packageName, @NonNull Resources resources, @NonNull Execute execute) {
         if (INSTANCE == null) {
             //When instance is not available
@@ -74,14 +60,6 @@ public class ResourceClass implements IResourceClassRepo {
         return INSTANCE;
     }
 
-    /**
-     * Method that retrieves the List of {@link PlaceClass} data for the PlaceClass list entries
-     * tracked by the {@code arrayResId}.
-     *
-     * @param arrayResId       The Integer Id of the Array resource that tracks the
-     *                         PlaceClass list entries to be shown.
-     * @param resourceCallback The Callback to be implemented by the caller to receive the result.
-     */
     @Override
     public void getPlaceListEntries(@ArrayRes int arrayResId, @NonNull GetResourceCallback<List<PlaceClass>> resourceCallback) {
         //Executing on the Disk Thread
@@ -198,14 +176,6 @@ public class ResourceClass implements IResourceClassRepo {
         });
     }
 
-    /**
-     * Method that retrieves the List of {@link ParkClass} data for the ParkClass list entries
-     * tracked by the {@code arrayResId}.
-     *
-     * @param arrayResId       The Integer Id of the Array resource that tracks the
-     *                         ParkClass list entries to be shown.
-     * @param resourceCallback The Callback to be implemented by the caller to receive the result.
-     */
     @Override
     public void getParkListEntries(@ArrayRes int arrayResId, @NonNull GetResourceCallback<List<ParkClass>> resourceCallback) {
         //Executing on the Disk Thread
@@ -313,14 +283,6 @@ public class ResourceClass implements IResourceClassRepo {
         });
     }
 
-    /**
-     * Method that retrieves the List of {@link HotelsClass} data for the HotelsClass list entries
-     * tracked by the {@code arrayResId}.
-     *
-     * @param arrayResId       The Integer Id of the Array resource that tracks the
-     *                         HotelsClass list entries to be shown.
-     * @param resourceCallback The Callback to be implemented by the caller to receive the result.
-     */
     @Override
     public void getHotelListEntries(@ArrayRes int arrayResId, @NonNull GetResourceCallback<List<HotelsClass>> resourceCallback) {
         //Executing on the Disk Thread
@@ -433,14 +395,6 @@ public class ResourceClass implements IResourceClassRepo {
         });
     }
 
-    /**
-     * Method that retrieves the List of {@link RestaurantClass} data for the RestaurantClass list entries
-     * tracked by the {@code arrayResId}.
-     *
-     * @param arrayResId       The Integer Id of the Array resource that tracks the
-     *                         RestaurantClass list entries to be shown.
-     * @param resourceCallback The Callback to be implemented by the caller to receive the result.
-     */
     @Override
     public void getRestaurantListEntries(@ArrayRes int arrayResId, @NonNull GetResourceCallback<List<RestaurantClass>> resourceCallback) {
         //Executing on the Disk Thread
@@ -551,14 +505,6 @@ public class ResourceClass implements IResourceClassRepo {
         });
     }
 
-    /**
-     * Method that retrieves the List of {@link ShopClass} data for the ShopClass list entries
-     * tracked by the {@code arrayResId}.
-     *
-     * @param arrayResId       The Integer Id of the Array resource that tracks the
-     *                         ShopClass list entries to be shown.
-     * @param resourceCallback The Callback to be implemented by the caller to receive the result.
-     */
     @Override
     public void getShopListEntries(@ArrayRes int arrayResId, @NonNull GetResourceCallback<List<ShopClass>> resourceCallback) {
         //Executing on the Disk Thread

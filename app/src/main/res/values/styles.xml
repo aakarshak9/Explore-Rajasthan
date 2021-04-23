@@ -176,33 +176,14 @@
     </style>
 
     <!-- Style to align the V component under ConstraintLayout to the Bottom in center_horizontal format -->
-    <style name="ConstraintBottomCenterHorizontalStyle" parent="ConstraintCenterHorizontalStyle">
-        <item name="layout_constraintBottom_toBottomOf">parent</item>
-    </style>
 
     <!-- Style to align the V component under ConstraintLayout to the complete Center of its Parent -->
-    <style name="ConstraintCenterInParentStyle" parent="ConstraintCenterHorizontalStyle">
-        <item name="layout_constraintTop_toTopOf">parent</item>
-        <item name="layout_constraintBottom_toBottomOf">parent</item>
-    </style>
 
     <!-- Style to align the V component under ConstraintLayout in center_vertical format -->
-    <style name="ConstraintCenterVerticalStyle">
-        <item name="layout_constraintTop_toTopOf">parent</item>
-        <item name="layout_constraintBottom_toBottomOf">parent</item>
-    </style>
 
     <!-- Style to align the V component under ConstraintLayout to the Left in center_vertical format -->
-    <style name="ConstraintLeftCenterVerticalStyle" parent="ConstraintCenterVerticalStyle">
-        <item name="layout_constraintLeft_toLeftOf">parent</item>
-        <item name="layout_constraintStart_toStartOf">parent</item>
-    </style>
 
     <!-- Style to align the V component under ConstraintLayout to the Right in center_vertical format -->
-    <style name="ConstraintRightCenterVerticalStyle" parent="ConstraintCenterVerticalStyle">
-        <item name="layout_constraintEnd_toEndOf">parent</item>
-        <item name="layout_constraintRight_toRightOf">parent</item>
-    </style>
 
     <!-- =================================== -->
     <!-- STYLES USED FOR PLACE LIST FRAGMENT -->

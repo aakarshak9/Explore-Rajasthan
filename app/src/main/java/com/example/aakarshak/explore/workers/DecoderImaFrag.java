@@ -4,20 +4,20 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.LoaderManager;
-import android.support.v4.content.Loader;
 import android.widget.ImageView;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
 
 import com.example.aakarshak.explore.R;
 
-public class DecoderImaFrag extends Fragment
-        implements LoaderManager.LoaderCallbacks<Bitmap> {
+public class DecoderImaFrag extends Fragment implements LoaderManager.LoaderCallbacks<Bitmap> {
 
     //Constant used for logs and Fragment Tag
     private static final String LOG_TAG = DecoderImaFrag.class.getSimpleName();
@@ -34,14 +34,6 @@ public class DecoderImaFrag extends Fragment
     //Stores the OnSuccessListener instance
     private OnSuccessListener mOnSuccessListener;
 
-    /**
-     * Static Constructor of the Fragment
-     *
-     * @param fragmentManager FragmentManager that manages the Fragments
-     * @param tagId           The integer position that identifies the view being inflated
-     *                        in the RecyclerView's Adapter or any other unique id.
-     * @return Instance of the Fragment {@link DecoderImaFrag}
-     */
     public static DecoderImaFrag newInstance(FragmentManager fragmentManager, int tagId) {
         //Creating the Fragment Tag string using the tagId passed
         String fragmentTagStr = LOG_TAG + "_" + tagId;
@@ -62,26 +54,11 @@ public class DecoderImaFrag extends Fragment
         return decoderImaFrag;
     }
 
-    /**
-     * Method that loads the Image from Memory Cache or decodes the Image from the Resource Id passed
-     * if necessary.
-     *
-     * @param imageView       The ImageView Component to which the Image needs to be updated
-     * @param imageResourceId Integer representing the Resource Id of the Image that needs to be decoded
-     */
     public void executeAndUpdate(ImageView imageView, @DrawableRes int imageResourceId) {
         //Delegating to other overloaded method with the derived instance for LoaderManager
         executeAndUpdate(imageView, imageResourceId, obtainLoaderManager(imageView));
     }
 
-    /**
-     * Method that loads the Image from Memory Cache or decodes the Image from the Resource Id passed
-     * if necessary.
-     *
-     * @param imageView       The ImageView Component to which the Image needs to be updated
-     * @param imageResourceId Integer representing the Resource Id of the Image that needs to be decoded
-     * @param loaderManager   Instance of {@link LoaderManager} to use for decoding the image.
-     */
     public void executeAndUpdate(ImageView imageView, @DrawableRes int imageResourceId, LoaderManager loaderManager) {
         //Saving the parameters passed
         mImageResourceId = imageResourceId;
@@ -120,14 +97,6 @@ public class DecoderImaFrag extends Fragment
 
     }
 
-    /**
-     * Method that returns the instance of the {@link DecoderIma} for the
-     * Loader Id {@code loaderId} passed.
-     *
-     * @param loaderId      The Id of the Loader whose Loader instance needs to be looked up
-     * @param loaderManager Instance of {@link LoaderManager}
-     * @return Instance of {@link DecoderIma} if found; else {@code null}
-     */
     @Nullable
     private DecoderIma getImageDecoder(int loaderId, LoaderManager loaderManager) {
         //Getting the loader at the loaderId
@@ -141,13 +110,6 @@ public class DecoderImaFrag extends Fragment
         }
     }
 
-    /**
-     * Method that retrieves the {@link FragmentActivity} instance required
-     * for obtaining the {@link LoaderManager} instance.
-     *
-     * @param context The {@link Context} to retrieve the Activity from.
-     * @return Instance of the {@link FragmentActivity} is any; else {@code null}
-     */
     @Nullable
     private FragmentActivity obtainActivity(@Nullable Context context) {
         if (context == null) {
@@ -164,13 +126,6 @@ public class DecoderImaFrag extends Fragment
         return null;
     }
 
-    /**
-     * Method that retrieves the {@link LoaderManager} instance for the given view {@code imageView}
-     *
-     * @param imageView The {@link ImageView} to retrieve the {@link LoaderManager} from.
-     * @return Instance of {@link LoaderManager} when the {@link FragmentActivity} was derivable
-     * from {@code imageView}; else {@code null}
-     */
     @Nullable
     private LoaderManager obtainLoaderManager(ImageView imageView) {
         //Obtaining the Activity from the ImageView
@@ -183,13 +138,6 @@ public class DecoderImaFrag extends Fragment
         return null;
     }
 
-    /**
-     * Instantiate and return a new Loader for the given ID.
-     *
-     * @param id   The ID whose loader is to be created.
-     * @param args Any arguments supplied by the caller.
-     * @return Return a new Loader instance that is ready to start loading.
-     */
     @NonNull
     @Override
     public Loader<Bitmap> onCreateLoader(int id, @Nullable Bundle args) {
@@ -197,13 +145,6 @@ public class DecoderImaFrag extends Fragment
         return new DecoderIma(mImageView.getContext(), mImageResourceId);
     }
 
-    /**
-     * Called when a previously created loader has finished its load.
-     * This is where we display the Bitmap image generated by the loader
-     *
-     * @param loader      The Loader that has finished.
-     * @param bitmapImage The Bitmap Image generated by the Loader.
-     */
     @Override
     public void onLoadFinished(@NonNull Loader<Bitmap> loader, Bitmap bitmapImage) {
         if (bitmapImage != null && mImageView != null) {
@@ -215,13 +156,6 @@ public class DecoderImaFrag extends Fragment
         }
     }
 
-    /**
-     * Method invoked on Success of decoding the Image.
-     * This method sets the decoded Image {@code bitmapImage} to the ImageView
-     * and triggers the Success event if {@link OnSuccessListener} is registered.
-     *
-     * @param bitmapImage The {@link Bitmap} of the Image Resource decoded
-     */
     private void onDecodingSuccess(Bitmap bitmapImage) {
         //Updating the ImageView when the Bitmap is decoded successfully
         mImageView.setImageBitmap(bitmapImage);
@@ -231,11 +165,6 @@ public class DecoderImaFrag extends Fragment
         }
     }
 
-    /**
-     * Method invoked on failure of decoding the Image, or when the Image Resource Id was invalid.
-     * This method sets the error image 'R.drawable.ic_all_no_picture' to the ImageView
-     * and triggers the Failure event if {@link OnFailureListener} is registered.
-     */
     private void onDecodingFailure() {
         //Resetting the ImageView to the error image when the Bitmap failed to be decoded
         mImageView.setImageResource(R.drawable.layer_all_noooo_picture);
@@ -245,64 +174,29 @@ public class DecoderImaFrag extends Fragment
         }
     }
 
-    /**
-     * Called when a previously created loader is being reset, and thus
-     * making its data unavailable.  The application should at this point
-     * remove any references it has to the Loader's data.
-     *
-     * @param loader The Loader that is being reset.
-     */
     @Override
     public void onLoaderReset(@NonNull Loader<Bitmap> loader) {
         //Resetting the ImageView to the default Thumbnail Image
         mImageView.setImageResource(R.drawable.layer_def_pic);
     }
 
-    /**
-     * Method that registers the {@link OnFailureListener} to dispatch failure events.
-     *
-     * @param listener Instance of {@link OnFailureListener} that wishes to receive failure events.
-     * @return Instance of the this Fragment {@link DecoderImaFrag} to chain method calls
-     */
     public DecoderImaFrag setOnFailureListener(OnFailureListener listener) {
         mOnFailureListener = listener;
         return this;
     }
 
-    /**
-     * Method that registers the {@link OnSuccessListener} to dispatch success events.
-     *
-     * @param listener Instance of {@link OnSuccessListener} that wishes to receive success events.
-     * @return Instance of the this Fragment {@link DecoderImaFrag} to chain method calls
-     */
     public DecoderImaFrag setOnSuccessListener(OnSuccessListener listener) {
         mOnSuccessListener = listener;
         return this;
     }
 
-    /**
-     * Callback interface to be implemented by the Activity/Fragment
-     * to receive failure events of Bitmap decoding operation
-     */
     public interface OnFailureListener {
-        /**
-         * Callback method of {@link OnFailureListener} invoked when the Bitmap
-         * fails to be decoded
-         */
+
         void onFailure();
     }
 
-    /**
-     * Callback interface to be implemented by the Activity/Fragment
-     * to receive success events of Bitmap decoding operation
-     */
     public interface OnSuccessListener {
-        /**
-         * Callback method of {@link OnSuccessListener} invoked when the Bitmap
-         * was decoded successfully.
-         *
-         * @param resultBitmap The Bitmap that was decoded successfully.
-         */
+
         void onSuccess(@NonNull Bitmap resultBitmap);
     }
 }

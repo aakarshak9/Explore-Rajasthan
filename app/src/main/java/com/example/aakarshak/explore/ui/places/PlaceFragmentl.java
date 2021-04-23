@@ -5,21 +5,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.constraint.Group;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v4.widget.TextViewCompat;
-import android.support.v7.content.res.AppCompatResources;
-import android.support.v7.recyclerview.extensions.ListAdapter;
-import android.support.v7.util.DiffUtil;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,27 +12,39 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.content.res.AppCompatResources;
+import androidx.constraintlayout.widget.Group;
+import androidx.core.content.ContextCompat;
+import androidx.core.widget.TextViewCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.ListAdapter;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.example.aakarshak.explore.R;
 import com.example.aakarshak.explore.data.local.models.PlaceClass;
-import com.example.aakarshak.explore.ui.BaseV;
-import com.example.aakarshak.explore.ui.PresenterB;
 import com.example.aakarshak.explore.ui.common.SpacingList;
 import com.example.aakarshak.explore.utils.ImageUtility;
 import com.example.aakarshak.explore.utils.UtilityColor;
 import com.example.aakarshak.explore.utils.UtilityIntent;
 import com.example.aakarshak.explore.utils.UtlitySnack;
 import com.example.aakarshak.explore.workers.DecoderImaFrag;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executors;
 
-public class PlaceFragmentl extends Fragment
-        implements ContractPlaceList.V, SwipeRefreshLayout.OnRefreshListener {
+public class PlaceFragmentl extends Fragment implements ContractPlaceList.V, SwipeRefreshLayout.OnRefreshListener {
 
     //Constant used for logs
     private static final String LOG_TAG = PlaceFragmentl.class.getSimpleName();
@@ -65,42 +62,14 @@ public class PlaceFragmentl extends Fragment
     //Adapter of the RecyclerView
     private PlaceListAdapter mAdapter;
 
-    /**
-     * Mandatory Empty Constructor of {@link PlaceFragmentl}.
-     * This is required by the {@link android.support.v4.app.FragmentManager} to instantiate
-     * the fragment (e.g. upon screen orientation changes).
-     */
     public PlaceFragmentl() {
     }
 
-    /**
-     * Static Factory constructor that creates an instance of {@link PlaceFragmentl}
-     *
-     * @return Instance of {@link PlaceFragmentl}
-     */
     @NonNull
     public static PlaceFragmentl newInstance() {
         return new PlaceFragmentl();
     }
 
-    /**
-     * Called to have the fragment instantiate its user interface view.
-     * This is optional, and non-graphical fragments can return null (which
-     * is the default implementation).  This will be called between
-     * {@link #onCreate(Bundle)} and {@link #onActivityCreated(Bundle)}.
-     * <p>
-     * <p>If you return a V from here, you will later be called in
-     * {@link #onDestroyView} when the view is being released.
-     *
-     * @param inflater           The LayoutInflater object that can be used to inflate
-     *                           any views in the fragment,
-     * @param container          If non-null, this is the parent view that the fragment's
-     *                           UI should be attached to. The fragment should not add the view itself,
-     *                           but this can be used to generate the LayoutParams of the view.
-     * @param savedInstanceState If non-null, this fragment is being re-constructed
-     *                           from a previous saved state as given here.
-     * @return Returns the V for the fragment's UI ('R.layout.layout_main_content_page')
-     */
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -125,20 +94,13 @@ public class PlaceFragmentl extends Fragment
         return rootView;
     }
 
-    /**
-     * Method that initializes the SwipeRefreshLayout 'R.id.swipe_refresh_content_page'
-     * and its listener
-     */
     private void setupSwipeRefresh() {
         //Registering the refresh listener which triggers a new load on swipe to refresh
         mSwipeRefreshLayout.setOnRefreshListener(this);
         //Configuring the Colors for Swipe Refresh Progress Indicator
-        mSwipeRefreshLayout.setColorSchemeColors(UtilityColor.obtainColorsFromTypedArray(requireContext(), R.array.swipe_refresh_colors, R.color.colorPrimary));
+        mSwipeRefreshLayout.setColorSchemeColors(UtilityColor.obtainColorsFromTypedArray(requireContext(), R.array.swipe_refresh_colors, R.color.colorPrimaryDark));
     }
 
-    /**
-     * Method that initializes a RecyclerView with its Adapter for loading and displaying the list of Places.
-     */
     private void setupRecyclerView() {
         //Creating a Vertical Linear Layout Manager with the default layout order
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(requireContext(),
@@ -160,19 +122,6 @@ public class PlaceFragmentl extends Fragment
         mRecyclerViewContentList.addItemDecoration(new SpacingList(itemSpacing, itemSpacing));
     }
 
-    /**
-     * Called when the fragment's activity has been created and this
-     * fragment's view hierarchy instantiated.  It can be used to do final
-     * initialization once these pieces are in place, such as retrieving
-     * views or restoring state.  It is also useful for fragments that use
-     * {@link #setRetainInstance(boolean)} to retain their instance,
-     * as this callback tells the fragment when it is fully associated with
-     * the new activity instance.  This is called after {@link #onCreateView}
-     * and before {@link #onViewStateRestored(Bundle)}.
-     *
-     * @param savedInstanceState If the fragment is being re-created from
-     *                           a previous saved state, this is the state.
-     */
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -185,24 +134,6 @@ public class PlaceFragmentl extends Fragment
         }
     }
 
-    /**
-     * Called to ask the fragment to save its current dynamic state, so it
-     * can later be reconstructed in a new instance of its process is
-     * restarted.  If a new instance of the fragment later needs to be
-     * created, the data you place in the Bundle here will be available
-     * in the Bundle given to {@link #onCreate(Bundle)},
-     * {@link #onCreateView(LayoutInflater, ViewGroup, Bundle)}, and
-     * {@link #onActivityCreated(Bundle)}.
-     * <p>
-     * <p>This corresponds to  and most of the discussion there
-     * applies here as well.  Note however: <em>this method may be called
-     * at any time before {@link #onDestroy()}</em>.  There are many situations
-     * where a fragment may be mostly torn down (such as when placed on the
-     * back stack with no UI showing), but its state will not be saved until
-     * its owning activity actually needs to save its state.
-     *
-     * @param outState Bundle in which to place your saved state.
-     */
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -211,12 +142,6 @@ public class PlaceFragmentl extends Fragment
         outState.putParcelableArrayList(BUNDLE_PLACES_LIST_KEY, mAdapter.getPlaceList());
     }
 
-    /**
-     * Called when the fragment is visible to the user and actively running.
-     * This is generally
-     * tied to  of the containing
-     * Activity's lifecycle.
-     */
     @Override
     public void onResume() {
         super.onResume();
@@ -225,28 +150,17 @@ public class PlaceFragmentl extends Fragment
         mPresenter.start();
     }
 
-    /**
-     * Called when a swipe gesture triggers a refresh.
-     */
     @Override
     public void onRefresh() {
         //Dispatching the event to the PresenterBase to reload the data
         mPresenter.onRefreshMenuClicked();
     }
 
-    /**
-     * Method that registers the PresenterBase {@code presenter} with the V implementing {@link BaseV}
-     *
-     * @param presenter PresenterBase instance implementing the {@link PresenterB}
-     */
     @Override
     public void setPresenter(ContractPlaceList.PresenterBase presenter) {
         mPresenter = presenter;
     }
 
-    /**
-     * Method that displays the Progress indicator
-     */
     @Override
     public void showProgressIndicator() {
         //Enabling the Swipe to Refresh if disabled prior to showing the Progress indicator
@@ -259,33 +173,18 @@ public class PlaceFragmentl extends Fragment
         }
     }
 
-    /**
-     * Method that hides the Progress indicator
-     */
     @Override
     public void hideProgressIndicator() {
         //Hiding the Progress indicator
         mSwipeRefreshLayout.setRefreshing(false);
     }
 
-    /**
-     * Method that updates the RecyclerView's Adapter with new {@code placeClassList} data.
-     *
-     * @param placeClassList List of {@link PlaceClass}s loaded from the Resources.
-     */
     @Override
     public void loadPlaces(List<PlaceClass> placeClassList) {
         //Submitting the Places data to the Adapter to load
         mAdapter.submitList(placeClassList);
     }
 
-    /**
-     * Method invoked when an error is encountered during information
-     * retrieval process.
-     *
-     * @param messageId String Resource of the error Message to be displayed
-     * @param args      Variable number of arguments to replace the format specifiers
-     */
     @Override
     public void showError(int messageId, @Nullable Object... args) {
         if (getView() != null) {
@@ -313,101 +212,44 @@ public class PlaceFragmentl extends Fragment
         }
     }
 
-    /**
-     * Method invoked when there is no Web Page URL of the {@link PlaceClass} item being clicked.
-     */
     @Override
     public void showNoLinkError() {
         showError(R.string.no_link_error);
     }
 
-    /**
-     * Method invoked when the user clicks on the Item V itself. This should launch
-     * a browser application for the URL {@code webUrl} of the Web Page passed.
-     *
-     * @param webUrl String containing the URL of the Web Page
-     */
     @Override
     public void launchWebLink(String webUrl) {
         //Launching the Browser application for the Web Page URL passed
         UtilityIntent.openLink(requireContext(), webUrl);
     }
 
-    /**
-     * Method invoked when the user clicks on the Map ImageButton of the Item V.
-     * This should launch any Map application passing in the {@code location} information.
-     *
-     * @param location String containing the Location information to be sent to a Map application.
-     */
     @Override
     public void launchMapLocation(String location) {
         //Launching the Map application for the location information passed
         UtilityIntent.openMap(requireContext(), location);
     }
 
-    /**
-     * Method invoked when the user clicks and holds on to the Location Info TextView of the Item V.
-     * This should launch a Share Intent passing in the location information.
-     *
-     * @param location String containing the Location information to be shared via an Intent.
-     */
     @Override
     public void launchShareLocation(String location) {
         //Launching the Share Intent to share the location text
         UtilityIntent.shareText(requireActivity(), location, getString(R.string.all_location_title));
     }
 
-    /**
-     * {@link ListAdapter} class for RecyclerView to load the list of Places to be displayed.
-     */
     private static class PlaceListAdapter extends ListAdapter<PlaceClass, PlaceListAdapter.ViewHolder> {
 
         //Payload Constants used to rebind the "Expanded/Collapsed" state of the list items for the position stored here
         private static final String PAYLOAD_EXPAND_CARD = "Payload.Expand.ItemPosition";
         private static final String PAYLOAD_COLLAPSE_CARD = "Payload.Collapse.ItemPosition";
-        /**
-         * {@link DiffUtil.ItemCallback} for calculating the difference between two {@link PlaceClass} objects
-         */
-        private static DiffUtil.ItemCallback<PlaceClass> DIFF_PLACES
+
+        private static final DiffUtil.ItemCallback<PlaceClass> DIFF_PLACES
                 = new DiffUtil.ItemCallback<PlaceClass>() {
-            /**
-             * Called to check whether two objects represent the same item.
-             * <p>
-             * For example, if your items have unique ids, this method should check their id equality.
-             *
-             * @param oldItem The item in the old list.
-             * @param newItem The item in the new list.
-             * @return True if the two items represent the same object or false if they are different.
-             *
-             * @see DiffUtil.Callback#areItemsTheSame(int, int)
-             */
+
             @Override
             public boolean areItemsTheSame(PlaceClass oldItem, PlaceClass newItem) {
                 //Returning the comparison of the PlaceClass's Id
                 return oldItem.getId() == newItem.getId();
             }
 
-            /**
-             * Called to check whether two items have the same data.
-             * <p>
-             * This information is used to detect if the contents of an item have changed.
-             * <p>
-             * This method to check equality instead of {@link Object#equals(Object)} so that you can
-             * change its behavior depending on your UI.
-             * <p>
-             * For example, if you are using DiffUtil with a
-             * {@link android.support.v7.widget.RecyclerView.Adapter RecyclerView.Adapter}, you should
-             * return whether the items' visual representations are the same.
-             * <p>
-             * This method is called only if {@link #areItemsTheSame(PlaceClass, PlaceClass)} returns {@code true} for
-             * these items.
-             *
-             * @param oldItem The item in the old list.
-             * @param newItem The item in the new list.
-             * @return True if the contents of the items are the same or false if they are different.
-             *
-             * @see DiffUtil.Callback#areContentsTheSame(int, int)
-             */
             @Override
             public boolean areContentsTheSame(PlaceClass oldItem, PlaceClass newItem) {
                 //Returning the comparison of Name
@@ -415,20 +257,14 @@ public class PlaceFragmentl extends Fragment
             }
         };
         //Context for reading resources
-        private Context mContext;
+        private final Context mContext;
         //Listener for the User actions on the PlaceClass List Items
-        private UserActionPlace mActionsListener;
+        private final UserActionPlace mActionsListener;
         //Stores the Item Position of the Last expanded card
         private int mLastExpandedItemPosition = RecyclerView.NO_POSITION;
         //The Data of this Adapter that stores a list of Places to be displayed
         private ArrayList<PlaceClass> mPlaceClassList;
 
-        /**
-         * Constructor of {@link PlaceListAdapter}
-         *
-         * @param context             A {@link Context} for reading resources
-         * @param userActionsListener Instance of {@link UserActionPlace}
-         */
         PlaceListAdapter(Context context, UserActionPlace userActionsListener) {
             super(DIFF_PLACES);
             mContext = context;
@@ -436,15 +272,6 @@ public class PlaceFragmentl extends Fragment
             mActionsListener = userActionsListener;
         }
 
-        /**
-         * Called when RecyclerView needs a new {@link ViewHolder} of the given type to represent
-         * an item.
-         *
-         * @param parent   The ViewGroup into which the new V will be added after it is bound to
-         *                 an adapter position.
-         * @param viewType The view type of the new V.
-         * @return A new ViewHolder that holds a V of the given view type.
-         */
         @NonNull
         @Override
         public PlaceListAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -455,15 +282,6 @@ public class PlaceFragmentl extends Fragment
             return new ViewHolder(itemView);
         }
 
-        /**
-         * Called by RecyclerView to display the data at the specified position. This method should
-         * update the contents of the {@link ViewHolder#itemView} to reflect the item at the given
-         * position.
-         *
-         * @param holder   The ViewHolder which should be updated to represent the contents of the
-         *                 item at the given position in the data set.
-         * @param position The position of the item within the adapter's data set.
-         */
         @Override
         public void onBindViewHolder(@NonNull PlaceListAdapter.ViewHolder holder, int position) {
             //Get the data at the position
@@ -484,34 +302,6 @@ public class PlaceFragmentl extends Fragment
             }
         }
 
-        /**
-         * Called by RecyclerView to display the data at the specified position. This method
-         * should update the contents of the {@link ViewHolder#itemView} to reflect the item at
-         * the given position.
-         * <p>
-         * Note that unlike {@link ListView}, RecyclerView will not call this method
-         * again if the position of the item changes in the data set unless the item itself is
-         * invalidated or the new position cannot be determined. For this reason, you should only
-         * use the <code>position</code> parameter while acquiring the related data item inside
-         * this method and should not keep a copy of it. If you need the position of an item later
-         * on (e.g. in a click listener), use {@link ViewHolder#getAdapterPosition()} which will
-         * have the updated adapter position.
-         * <p>
-         * Partial bind vs full bind:
-         * <p>
-         * The payloads parameter is a merge list from {@link #notifyItemChanged(int, Object)} or
-         * {@link #notifyItemRangeChanged(int, int, Object)}.  If the payloads list is not empty,
-         * the ViewHolder is currently bound to old data and Adapter may run an efficient partial
-         * update using the payload info.  If the payload is empty,  Adapter must run a full bind.
-         * Adapter should not assume that the payload passed in notify methods will be received by
-         * onBindViewHolder().  For example when the view is not attached to the screen, the
-         * payload in notifyItemChange() will be simply dropped.
-         *
-         * @param holder   The ViewHolder which should be updated to represent the contents of the
-         *                 item at the given position in the data set.
-         * @param position The position of the item within the adapter's data set.
-         * @param payloads A non-null list of merged payloads. Can be empty list if requires full
-         */
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, int position, @NonNull List<Object> payloads) {
             if (payloads.isEmpty()) {
@@ -551,14 +341,6 @@ public class PlaceFragmentl extends Fragment
             }
         }
 
-        /**
-         * Submits a new list to be diffed, and displayed.
-         * <p>
-         * If a list is already being displayed, a diff will be computed on a background thread, which
-         * will dispatch Adapter.notifyItem events on the main thread.
-         *
-         * @param list The new list to be displayed.
-         */
         @Override
         public void submitList(List<PlaceClass> list) {
             //Preparing the list to store a copy of the Adapter data
@@ -575,20 +357,10 @@ public class PlaceFragmentl extends Fragment
             super.submitList(list);
         }
 
-        /**
-         * Getter Method for the data of this Adapter.
-         *
-         * @return List of {@link PlaceClass} shown by the Adapter
-         */
         ArrayList<PlaceClass> getPlaceList() {
             return mPlaceClassList;
         }
 
-        /**
-         * Method that updates/changes the {@link PlaceClass} Item to be expanded.
-         *
-         * @param position The Position of the {@link PlaceClass} Item to be expanded.
-         */
         void changeItemExpanded(int position) {
             //Collapse any previously expanded card
             if (mLastExpandedItemPosition > RecyclerView.NO_POSITION) {
@@ -604,11 +376,6 @@ public class PlaceFragmentl extends Fragment
             notifyItemChanged(position, payloadBundle);
         }
 
-        /**
-         * Method that updates the {@link PlaceClass} Item to be collapsed.
-         *
-         * @param position The Position of the {@link PlaceClass} Item to be collapsed.
-         */
         void setItemCollapsed(int position) {
             //Creating a Bundle to do a partial update for collapsing the card
             Bundle payloadBundle = new Bundle(1);
@@ -622,32 +389,24 @@ public class PlaceFragmentl extends Fragment
             }
         }
 
-        /**
-         * ViewHolder class for caching V components of the template item view 'R.layout.item_place_list'
-         */
         public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener {
             //References to the Views required, in the Item V
-            private TextView mTextViewPlaceName;
-            private TextView mTextViewPlaceTypes;
-            private TextView mTextViewTypesRatingSeparator;
-            private ImageView mImageViewPlaceType;
-            private TextView mTextViewRating;
-            private RatingBar mRatingBar;
-            private ImageView mImageViewPlacePhoto;
-            private TextView mTextViewAccessTime;
-            private TextView mTextViewEntryFee;
-            private TextView mTextViewDescription;
-            private View mViewTopRibbon;
-            private Button mButtonExpandCollapse;
-            private ImageButton mImageButtonLocation;
-            private Group mGroupPlaceLocation;
-            private TextView mTextViewPlaceLocation;
+            private final TextView mTextViewPlaceName;
+            private final TextView mTextViewPlaceTypes;
+            private final TextView mTextViewTypesRatingSeparator;
+            private final ImageView mImageViewPlaceType;
+            private final TextView mTextViewRating;
+            private final RatingBar mRatingBar;
+            private final ImageView mImageViewPlacePhoto;
+            private final TextView mTextViewAccessTime;
+            private final TextView mTextViewEntryFee;
+            private final TextView mTextViewDescription;
+            private final View mViewTopRibbon;
+            private final Button mButtonExpandCollapse;
+            private final ImageButton mImageButtonLocation;
+            private final Group mGroupPlaceLocation;
+            private final TextView mTextViewPlaceLocation;
 
-            /**
-             * Constructor of {@link ViewHolder}
-             *
-             * @param itemView Inflated Instance of the Item V 'R.layout.item_place_list'
-             */
             ViewHolder(View itemView) {
                 super(itemView);
 
@@ -676,12 +435,6 @@ public class PlaceFragmentl extends Fragment
                 itemView.setOnClickListener(this);
             }
 
-            /**
-             * Method that binds the views with the data {@code placeClass} at the position.
-             *
-             * @param position   The position of the Item in the list
-             * @param placeClass The {@link PlaceClass} data at the Item position
-             */
             void bind(int position, PlaceClass placeClass) {
                 //Bind the PlaceClass Name
                 mTextViewPlaceName.setText(placeClass.getName());
@@ -707,31 +460,21 @@ public class PlaceFragmentl extends Fragment
                 //Bind the Colors using the Palette if derived
                 if (placeClass.isSwatchGenerated()) {
                     //Use the Palette Colors when we have them
-                    mViewTopRibbon.setBackgroundColor(placeClass.getSwatchRgbColor());
-                    mTextViewPlaceName.setTextColor(placeClass.getSwatchTitleTextColor());
-                    mTextViewPlaceTypes.setTextColor(placeClass.getSwatchBodyTextColor());
-                    mTextViewTypesRatingSeparator.setTextColor(placeClass.getSwatchBodyTextColor());
-                    mTextViewRating.setTextColor(placeClass.getSwatchBodyTextColor());
-                    mButtonExpandCollapse.setTextColor(placeClass.getSwatchRgbColor());
+                    int colorPrimary = ContextCompat.getColor(mContext, R.color.colorPrimaryDark);
+                    mViewTopRibbon.setBackgroundColor(colorPrimary);
+
                 } else {
                     //When we do not have any Palette, use the default colors
-                    int colorPrimary = ContextCompat.getColor(mContext, R.color.colorPrimary);
+                    int colorPrimary = ContextCompat.getColor(mContext, R.color.colorPrimaryDark);
                     mViewTopRibbon.setBackgroundColor(colorPrimary);
-                    TextViewCompat.setTextAppearance(mTextViewPlaceName, android.support.v7.appcompat.R.style.TextAppearance_AppCompat_Title_Inverse);
-                    TextViewCompat.setTextAppearance(mTextViewPlaceTypes, android.support.v7.appcompat.R.style.TextAppearance_AppCompat_Small_Inverse);
-                    TextViewCompat.setTextAppearance(mTextViewTypesRatingSeparator, android.support.v7.appcompat.R.style.TextAppearance_AppCompat_Small_Inverse);
-                    TextViewCompat.setTextAppearance(mTextViewRating, android.support.v7.appcompat.R.style.TextAppearance_AppCompat_Small_Inverse);
+                    TextViewCompat.setTextAppearance(mTextViewPlaceName, androidx.appcompat.R.style.TextAppearance_AppCompat_Title_Inverse);
+                    TextViewCompat.setTextAppearance(mTextViewPlaceTypes, androidx.appcompat.R.style.TextAppearance_AppCompat_Small_Inverse);
+                    TextViewCompat.setTextAppearance(mTextViewTypesRatingSeparator, androidx.appcompat.R.style.TextAppearance_AppCompat_Small_Inverse);
+                    TextViewCompat.setTextAppearance(mTextViewRating, androidx.appcompat.R.style.TextAppearance_AppCompat_Small_Inverse);
                     mButtonExpandCollapse.setTextColor(colorPrimary);
                 }
             }
 
-            /**
-             * Method that binds the ImageView {@code imageView} with the Image Resource {@code imageResourceId} passed.
-             * When the Image Resource value is {@code 0}, the ImageView will be hidden.
-             *
-             * @param imageView       The ImageView that shows the Image passed
-             * @param imageResourceId The Resource Id of the Image to be bound to the ImageView.
-             */
             @SuppressLint("ResourceType")
             void bindImageView(ImageView imageView, @DrawableRes int imageResourceId) {
                 if (imageResourceId > ImageUtility.NO_RESOURCE_ID) {
@@ -755,11 +498,6 @@ public class PlaceFragmentl extends Fragment
                 }
             }
 
-            /**
-             * Called when a view has been clicked.
-             *
-             * @param view The view that was clicked.
-             */
             @Override
             public void onClick(View view) {
                 //Checking if the adapter position is valid
@@ -802,12 +540,6 @@ public class PlaceFragmentl extends Fragment
                 }
             }
 
-            /**
-             * Called when a view has been clicked and held.
-             *
-             * @param view The view that was clicked and held.
-             * @return true if the callback consumed the long click, false otherwise.
-             */
             @Override
             public boolean onLongClick(View view) {
                 //Checking if the adapter position is valid
@@ -835,10 +567,6 @@ public class PlaceFragmentl extends Fragment
                 return false;
             }
 
-            /**
-             * Method that expands the Item V by revealing the entire description of the PlaceClass
-             * along with its Location info.
-             */
             void expandItemView() {
                 //Revealing the Complete description
                 mTextViewDescription.setMaxLines(Integer.MAX_VALUE);
@@ -853,10 +581,6 @@ public class PlaceFragmentl extends Fragment
                 mGroupPlaceLocation.setVisibility(View.VISIBLE);
             }
 
-            /**
-             * Method that collapses the Item V by restricting the description of the PlaceClass
-             * to Max of 3 Lines and hides the Location info.
-             */
             void collapseItemView() {
                 //Restricting the description to Max 3 Lines
                 mTextViewDescription.setMaxLines(mContext.getResources().getInteger(R.integer.place_list_item_description_collapsed_max_lines));
@@ -875,48 +599,20 @@ public class PlaceFragmentl extends Fragment
         }
     }
 
-    /**
-     * Listener that implements {@link UserActionPlace} to receive
-     * event callbacks for User actions on RecyclerView list of Places.
-     */
     private class ItemUserActionPlace implements UserActionPlace {
 
-        /**
-         * Callback Method of {@link UserActionPlace} invoked when
-         * the user clicks on the Item V itself. This should launch
-         * the website link if any.
-         *
-         * @param itemPosition The adapter position of the Item clicked
-         * @param placeClass   The {@link PlaceClass} associated with the Item clicked
-         */
         @Override
         public void onOpenLink(int itemPosition, PlaceClass placeClass) {
             //Delegating to the PresenterBase to handle the event
             mPresenter.openLink(placeClass.getWebsite());
         }
 
-        /**
-         * Callback Method of {@link UserActionPlace} invoked when
-         * the user clicks on the Map ImageButton or the Location Info TextView of the Item V.
-         * This should launch any Map application passing in the location information.
-         *
-         * @param itemPosition The adapter position of the Item clicked
-         * @param placeClass   The {@link PlaceClass} associated with the Item clicked
-         */
         @Override
         public void onOpenLocation(int itemPosition, PlaceClass placeClass) {
             //Delegating to the PresenterBase to handle the event
             mPresenter.openLocation(placeClass.getLocation());
         }
 
-        /**
-         * Callback Method of {@link UserActionPlace} invoked when
-         * the user clicks and holds on to the Location Info TextView of the Item V. This should
-         * launch a Share Intent passing in the location information.
-         *
-         * @param itemPosition The adapter position of the Item clicked and held
-         * @param placeClass   The {@link PlaceClass} associated with the Item clicked and held
-         */
         @Override
         public void onLocationLongClicked(int itemPosition, PlaceClass placeClass) {
             //Delegating to the PresenterBase to handle the event

@@ -2,11 +2,12 @@ package com.example.aakarshak.explore.workers;
 
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.support.annotation.DrawableRes;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.content.AsyncTaskLoader;
 import android.util.Log;
+
+import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.loader.content.AsyncTaskLoader;
 
 import com.example.aakarshak.explore.cache.Image_bitmap;
 import com.example.aakarshak.explore.utils.ImageUtility;
@@ -21,25 +22,11 @@ public class DecoderIma extends AsyncTaskLoader<Bitmap> {
     //Stores the Bitmap Decoded
     private Bitmap mDecodedBitmap;
 
-    /**
-     * Constructor of the Loader {@link DecoderIma}
-     *
-     * @param context         A {@link Context} to retrieve the application context.
-     * @param imageResourceId Integer representing the Resource Id
-     *                        of the Image that needs to be decoded.
-     */
     public DecoderIma(@NonNull Context context, @DrawableRes int imageResourceId) {
         super(context);
         mImageResourceId = imageResourceId;
     }
 
-    /**
-     * Called on a worker thread to perform the actual load and to return
-     * the result of the load operation.
-     *
-     * @return The result of the load operation which is a Bitmap downloaded from the URL
-     * @throws android.support.v4.os.OperationCanceledException if the load is canceled during execution.
-     */
     @Nullable
     @Override
     public Bitmap loadInBackground() {
@@ -76,11 +63,6 @@ public class DecoderIma extends AsyncTaskLoader<Bitmap> {
         return null;
     }
 
-    /**
-     * Sends the result of the load to the registered listener. Should only be called by subclasses.
-     *
-     * @param newBitmap the result of the load which is a new Bitmap downloaded
-     */
     @Override
     public void deliverResult(Bitmap newBitmap) {
         if (isReset()) {
@@ -105,11 +87,6 @@ public class DecoderIma extends AsyncTaskLoader<Bitmap> {
         }
     }
 
-    /**
-     * Subclasses must implement this to take care of loading their data,
-     * as per {@link #startLoading()}.  This is not called by clients directly,
-     * but as a result of a call to {@link #startLoading()}.
-     */
     @Override
     protected void onStartLoading() {
         if (mDecodedBitmap != null) {
@@ -124,24 +101,12 @@ public class DecoderIma extends AsyncTaskLoader<Bitmap> {
         }
     }
 
-    /**
-     * Subclasses must implement this to take care of stopping their loader,
-     * as per {@link #stopLoading()}.  This is not called by clients directly,
-     * but as a result of a call to {@link #stopLoading()}.
-     * This will always be called from the process's main thread.
-     */
     @Override
     protected void onStopLoading() {
         //Canceling the load if any as the loader has entered Stopped state
         cancelLoad();
     }
 
-    /**
-     * Subclasses must implement this to take care of resetting their loader,
-     * as per {@link #reset()}.  This is not called by clients directly,
-     * but as a result of a call to {@link #reset()}.
-     * This will always be called from the process's main thread.
-     */
     @Override
     protected void onReset() {
         //Ensuring the loader has stopped
@@ -151,13 +116,6 @@ public class DecoderIma extends AsyncTaskLoader<Bitmap> {
         releaseResources();
     }
 
-    /**
-     * Called if the task was canceled before it was completed.  Gives the class a chance
-     * to clean up post-cancellation and to properly dispose of the result.
-     *
-     * @param data The value that was returned by {@link #loadInBackground}, or null
-     *             if the task threw {@link android.support.v4.os.OperationCanceledException}.
-     */
     @Override
     public void onCanceled(Bitmap data) {
         //Canceling any asynchronous load
@@ -167,9 +125,6 @@ public class DecoderIma extends AsyncTaskLoader<Bitmap> {
         releaseResources();
     }
 
-    /**
-     * Method to release the resources associated with the loader
-     */
     private void releaseResources() {
         //Invalidating the Loader data
         if (mDecodedBitmap != null) {
@@ -178,11 +133,6 @@ public class DecoderIma extends AsyncTaskLoader<Bitmap> {
         }
     }
 
-    /**
-     * Method that returns the Image Resource Id from which this loader decodes the image
-     *
-     * @return The Image Resource Id from which this loader decodes the image
-     */
     int getImageResourceId() {
         return mImageResourceId;
     }

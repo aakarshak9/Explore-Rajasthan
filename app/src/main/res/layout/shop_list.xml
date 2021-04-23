@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/BaseCardLightStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground">
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_shop_list_item_left_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_begin="@dimen/guideline_shop_list_item_horizontal_keyline" />
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_shop_list_item_right_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,7 +33,8 @@
             android:layout_height="@dimen/match_constraint_0dp"
             android:background="@color/colorPrimary"
             app:layout_constraintBottom_toTopOf="@+id/image_shop_list_item_photo"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp" />
 
         <TextView
             android:id="@+id/text_shop_list_item_title"
@@ -59,7 +60,6 @@
             android:id="@+id/text_shop_list_item_rating_value"
             style="@style/ShopListItemRatingValueStyle"
             android:layout_marginBottom="@dimen/shop_list_item_content_margin"
-            android:background="@color/shopListItemImageTextOverlayBackgroundColor"
             android:paddingStart="@dimen/text_shop_list_item_rating_value_padding_left"
             android:paddingLeft="@dimen/text_shop_list_item_rating_value_padding_left"
             android:paddingTop="@dimen/text_shop_list_item_rating_value_padding_vertical"
@@ -75,7 +75,6 @@
             android:id="@+id/ratingbar_shop_list_item_rating"
             style="@style/SmallRatingBarStyle"
             android:layout_height="@dimen/match_constraint_0dp"
-            android:background="@color/shopListItemImageTextOverlayBackgroundColor"
             android:padding="@dimen/ratingbar_shop_list_item_rating_padding"
             app:layout_constraintBottom_toBottomOf="@+id/text_shop_list_item_rating_value"
             app:layout_constraintLeft_toRightOf="@+id/text_shop_list_item_rating_value"
@@ -87,7 +86,6 @@
             android:id="@+id/text_shop_list_item_rating_type_separator"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/match_constraint_0dp"
-            android:background="@color/shopListItemImageTextOverlayBackgroundColor"
             android:paddingTop="@dimen/text_shop_list_item_rating_type_separator_padding_vertical"
             android:paddingBottom="@dimen/text_shop_list_item_rating_type_separator_padding_vertical"
             android:text="@string/bullet_marks"
@@ -100,7 +98,6 @@
             android:id="@+id/text_shop_list_item_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/shopListItemImageTextOverlayBackgroundColor"
             android:ellipsize="end"
             android:maxLines="1"
             android:paddingStart="@dimen/text_shop_list_item_type_padding_left"
@@ -157,7 +154,7 @@
             app:layout_constraintTop_toBottomOf="@+id/text_shop_list_item_timings"
             tools:text="Forum Centre City Mall, No.8 &amp; N&#8211;5, Hyder Ali Road, Nazarbad Mohalla, Jyothi Nagar, Gayathri Puram, Mysuru, Karnataka" />
 
-        <android.support.constraint.Group
+        <androidx.constraintlayout.widget.Group
             android:id="@+id/group_shop_list_item_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -190,6 +187,6 @@
             app:srcCompat="@drawable/ic_all_map_marker"
             tools:ignore="ContentDescription" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

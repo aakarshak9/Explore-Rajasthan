@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#bbdefb" />
+            <solid android:color="#99DA58" />
         </shape>
     </item>
     <item android:drawable="@drawable/ic_all_default_pic" />

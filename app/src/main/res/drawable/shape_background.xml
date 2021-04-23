@@ -4,8 +4,8 @@
     android:shape="rectangle">
     <gradient
         android:angle="90"
-        android:centerColor="#FDC830"
-        android:endColor="@color/colorPrimary"
-        android:startColor="@color/colorPrimary"
+        android:centerColor="#615D4F"
+        android:endColor="@color/aboutInfoCardBackgroundColor"
+        android:startColor="@color/allDividerColor"
         android:type="linear" />
 </shape>

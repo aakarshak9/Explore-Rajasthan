@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/BaseCardLightStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground">
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_hotel_list_item_left_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_begin="@dimen/guideline_hotel_list_item_horizontal_keyline" />
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_hotel_list_item_right_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -73,7 +73,6 @@
             style="@style/SmallRatingBarStyle"
             android:layout_marginStart="@dimen/ratingbar_hotel_list_item_rating_margin_left"
             android:layout_marginLeft="@dimen/ratingbar_hotel_list_item_rating_margin_left"
-            android:background="@color/hotelListItemRatingBackgroundColor"
             android:padding="@dimen/ratingbar_hotel_list_item_rating_padding"
             app:layout_constraintBottom_toBottomOf="@+id/text_hotel_list_item_rating_value"
             app:layout_constraintEnd_toEndOf="@+id/guideline_hotel_list_item_right_vertical"
@@ -115,7 +114,7 @@
             app:layout_constraintTop_toBottomOf="@+id/image_hotel_list_item_photo"
             tools:text="₹6500 (2 adults per Night)" />
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_hotel_list_item_center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -162,7 +161,7 @@
             app:layout_constraintTop_toBottomOf="@+id/text_hotel_list_item_cost"
             tools:text="The Quorum, 2257/,B&#8211;1,/1 1318, Vinoba Road, Near Kala Mandir, Devaraja Mohalla-1, CFTRI Campus, Kajjihundi, Mysuru, Karnataka" />
 
-        <android.support.constraint.Group
+        <androidx.constraintlayout.widget.Group
             android:id="@+id/group_hotel_list_item_contact_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -170,7 +169,7 @@
             app:constraint_referenced_ids="image_hotel_list_item_contact,text_hotel_list_item_contact,image_hotel_list_item_location,text_hotel_list_item_location"
             tools:visibility="visible" />
 
-        <android.support.constraint.Barrier
+        <androidx.constraintlayout.widget.Barrier
             android:id="@+id/barrier_hotel_list_item_contact_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -211,13 +210,13 @@
             app:srcCompat="@drawable/ic_all_call"
             tools:ignore="ContentDescription" />
 
-        <android.support.constraint.Group
+        <androidx.constraintlayout.widget.Group
             android:id="@+id/group_hotel_list_item_imgbtn_actions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="visible"
             app:constraint_referenced_ids="imgbtn_hotel_list_item_location,imgbtn_hotel_list_item_contact" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

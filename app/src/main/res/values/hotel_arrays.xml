@@ -40,7 +40,7 @@
 
     <!-- Radisson Blu Plaza -->
     <string-array name="oberoi_udaivilas_hotel">
-        <item>Oberoi UdaiVilas Hotel</item>
+        <item>Oberoi Udai Vilas Hotel</item>
         <item>@drawable/layer_hot_fiveee_star</item>
         <item>4.5</item>
         <item>@drawable/oberoi</item>

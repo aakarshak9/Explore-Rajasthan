@@ -95,7 +95,6 @@
     <!-- ========================== -->
     <dimen name="guideline_shop_list_item_horizontal_keyline">16dp</dimen>
     <dimen name="shop_list_item_content_margin">16dp</dimen>
-    <dimen name="shop_list_item_content_half_margin">8dp</dimen>
     <dimen name="text_shop_list_item_rating_value_padding_vertical">1dp</dimen>
     <dimen name="text_shop_list_item_rating_value_padding_left">4dp</dimen>
     <dimen name="text_shop_list_item_rating_value_padding_right">2dp</dimen>

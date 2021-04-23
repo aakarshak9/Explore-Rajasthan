@@ -6,23 +6,11 @@ import android.view.WindowManager;
 
 public class UtlityWindow {
 
-    /**
-     * Private constructor to avoid instantiating {@link UtlityWindow}
-     */
     private UtlityWindow() {
         //Suppressing with an error to enforce noninstantiability
         throw new AssertionError("No " + this.getClass().getCanonicalName() + " instances for you!");
     }
 
-    /**
-     * Gets the Width dimension of the Window excluding the system decor elements
-     * or the current Window if in Multi-Window mode. It may also return the complete
-     * device screen width when the Window Manager service is not available or when
-     * requested from a non-Activity context.
-     *
-     * @param context Activity/Application context
-     * @return Width of the Device/Window display in Pixels
-     */
     public static int getDisplayWindowWidth(Context context) {
         DisplayMetrics displayWindowMetrics = getDisplayWindowMetrics(context);
         if (displayWindowMetrics.widthPixels > 0) {
@@ -35,15 +23,6 @@ public class UtlityWindow {
         return context.getResources().getDisplayMetrics().widthPixels;
     }
 
-    /**
-     * Gets the Height dimension of the Window excluding the system decor elements
-     * or the current Window if in Multi-Window mode. It may also return the complete
-     * device screen height when the Window Manager service is not available or when
-     * requested from a non-Activity context.
-     *
-     * @param context Activity/Application context
-     * @return Width of the Device/Window display in Pixels
-     */
     public static int getDisplayWindowHeight(Context context) {
         DisplayMetrics displayWindowMetrics = getDisplayWindowMetrics(context);
         if (displayWindowMetrics.heightPixels > 0) {
@@ -56,14 +35,6 @@ public class UtlityWindow {
         return context.getResources().getDisplayMetrics().heightPixels;
     }
 
-    /**
-     * Gets the {@link DisplayMetrics} information for the current Window
-     * using the Window Manager Service if available.
-     *
-     * @param context Activity/Application context
-     * @return Instance of {@link DisplayMetrics} filled with information provided
-     * by Window Manager if available.
-     */
     private static DisplayMetrics getDisplayWindowMetrics(Context context) {
         //Creating an Instance of DisplayMetrics
         DisplayMetrics displayMetrics = new DisplayMetrics();

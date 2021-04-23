@@ -4,10 +4,8 @@
 
     <!-- Colors used by Swipe Refresh Progress Indicator -->
     <array name="swipe_refresh_colors">
-        <item>@color/colorPrimary</item>
+        <item>@color/colorPrimaryDark</item>
         <item>@color/colorAccent</item>
-        <item>#00bcd4</item>
-        <item>#607d8b</item>
     </array>
 
     <!-- =========================== -->

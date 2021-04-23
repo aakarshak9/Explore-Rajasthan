@@ -2,14 +2,14 @@ package com.example.aakarshak.explore.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.aakarshak.explore.R;
 import com.example.aakarshak.explore.cache.Image_bitmap;
@@ -26,6 +26,7 @@ import com.example.aakarshak.explore.ui.restaurants.RestoPresenterl;
 import com.example.aakarshak.explore.ui.shops.ShopFragmentl;
 import com.example.aakarshak.explore.ui.shops.ShopPresenterl;
 import com.example.aakarshak.explore.utils.UtilityInjector;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity
         implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -38,13 +39,6 @@ public class MainActivity extends AppCompatActivity
     //For the BottomNavigationView
     private BottomNavigationView mBottomNavigationView;
 
-    /**
-     * Called when the activity is starting.
-     *
-     * @param savedInstanceState If the activity is being re-initialized after
-     *                           previously being shut down then this Bundle contains the data it most
-     *                           recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
-     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,14 +60,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    /**
-     * Called to retrieve per-instance state from an activity before being killed
-     * so that the state can be restored in {@link #onCreate} or
-     * {@link #onRestoreInstanceState} (the {@link Bundle} populated by this method
-     * will be passed to both).
-     *
-     * @param outState Bundle in which to place your saved state.
-     */
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -82,9 +68,6 @@ public class MainActivity extends AppCompatActivity
         outState.putInt(BUNDLE_LAST_VIEWED_NAV_ITEM_INT_KEY, mBottomNavigationView.getSelectedItemId());
     }
 
-    /**
-     * Method that initializes the Toolbar
-     */
     private void setupToolbar() {
         //Finding the Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar_main);
@@ -92,9 +75,6 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
     }
 
-    /**
-     * Method that initializes the BottomNavigationView and its item selection listener
-     */
     private void setupBottomNavigationView() {
         //Finding the BottomNavigationView
         mBottomNavigationView = findViewById(R.id.navi_main);
@@ -102,14 +82,6 @@ public class MainActivity extends AppCompatActivity
         mBottomNavigationView.setOnNavigationItemSelectedListener(this);
     }
 
-    /**
-     * Initialize the contents of the Activity's standard options menu.  You
-     * should place your menu items in to <var>menu</var>.
-     *
-     * @param menu The options menu in which you place your items.
-     * @return You must return true for the menu to be displayed;
-     * if you return false it will not be shown.
-     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         //Inflating the Menu options from 'R.menu.menu_main'
@@ -118,15 +90,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    /**
-     * This hook is called whenever an item in your options menu is selected.
-     * The default implementation simply returns false to have the normal
-     * processing happen.
-     *
-     * @param item The menu item that was selected.
-     * @return boolean Return false to allow normal menu processing to
-     * proceed, true to consume it here.
-     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         //Handling based on the Menu item selected
@@ -151,9 +114,6 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
-    /**
-     * Method that launches the {@link AboutClassAct}. Invoked when "About" Menu is clicked.
-     */
     private void launchAboutActivity() {
         //Creating an Intent to launch AboutClassAct
         Intent aboutIntent = new Intent(this, AboutClassAct.class);
@@ -161,14 +121,6 @@ public class MainActivity extends AppCompatActivity
         startActivity(aboutIntent);
     }
 
-    /**
-     * Called when an item in the bottom navigation menu is selected.
-     *
-     * @param item The selected item
-     * @return true to display the item as the selected item and false if the item should not
-     * be selected. Consider setting non-selectable items as disabled preemptively to
-     * make them appear non-interactive.
-     */
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         //Retrieving the App Repository Instance
@@ -220,12 +172,6 @@ public class MainActivity extends AppCompatActivity
         return false;
     }
 
-    /**
-     * Method that replaces the Fragment at the FrameLayout 'R.id.content_main' with the given {@code fragment}
-     *
-     * @param fragment The Fragment to be loaded and shown.
-     * @return Instance of the loaded Fragment.
-     */
     private Fragment switchNavigationFragment(Fragment fragment) {
         //Retrieving the Fragment Manager
         FragmentManager supportFragmentManager = getSupportFragmentManager();
@@ -248,11 +194,6 @@ public class MainActivity extends AppCompatActivity
         return fragment;
     }
 
-    /**
-     * Called as part of the activity lifecycle when an activity is going into
-     * the background, but has not (yet) been killed.  The counterpart to
-     * {@link #onResume}.
-     */
     @Override
     protected void onPause() {
         super.onPause();

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/BaseCardLightStyle"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground">
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_park_list_item_left_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_begin="@dimen/guideline_park_list_item_horizontal_keyline" />
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_park_list_item_right_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,6 @@
             android:layout_marginEnd="@dimen/park_list_item_content_margin"
             android:layout_marginRight="@dimen/park_list_item_content_margin"
             android:layout_marginBottom="@dimen/text_park_list_item_title_margin_bottom"
-            android:background="@color/parkListItemImageTextOverlayBackgroundColor"
             android:paddingStart="@dimen/text_park_list_item_title_padding_horizontal"
             android:paddingLeft="@dimen/text_park_list_item_title_padding_horizontal"
             android:paddingTop="@dimen/text_park_list_item_title_padding_vertical"
@@ -59,7 +58,6 @@
             android:id="@+id/text_park_list_item_rating_value"
             style="@style/ParkListItemRatingValueStyle"
             android:layout_marginTop="@dimen/text_park_list_item_rating_value_margin_top"
-            android:background="@color/parkListItemImageTextOverlayBackgroundColor"
             android:paddingStart="@dimen/text_park_list_item_rating_value_padding_left"
             android:paddingLeft="@dimen/text_park_list_item_rating_value_padding_left"
             android:paddingTop="@dimen/text_park_list_item_rating_value_padding_vertical"
@@ -75,7 +73,6 @@
             android:id="@+id/ratingbar_park_list_item_rating"
             style="@style/SmallRatingBarStyle"
             android:layout_height="@dimen/match_constraint_0dp"
-            android:background="@color/parkListItemImageTextOverlayBackgroundColor"
             android:padding="@dimen/ratingbar_park_list_item_rating_padding"
             app:layout_constraintBottom_toBottomOf="@+id/text_park_list_item_rating_value"
             app:layout_constraintEnd_toEndOf="@+id/image_park_list_item_photo"
@@ -85,7 +82,7 @@
             app:layout_constraintTop_toTopOf="@+id/text_park_list_item_rating_value"
             tools:rating="4.5" />
 
-        <android.support.constraint.Guideline
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_park_list_item_center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -131,7 +128,7 @@
             app:layout_constraintTop_toBottomOf="@+id/image_park_list_item_photo"
             tools:text="Adult: ₹50,\n₹60 (Weekend)\nChild (5&#8211;12 yr): ₹20,\n₹30 (Weekend)" />
 
-        <android.support.constraint.Barrier
+        <androidx.constraintlayout.widget.Barrier
             android:id="@+id/barrier_park_list_item_time_fee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -167,7 +164,7 @@
             app:layout_constraintTop_toBottomOf="@+id/text_park_list_item_description"
             tools:text="Bonsai garden, Sri Ganapati Sachchidananda Ashrama, Ooty Rd, Datta Nagar, Mysuru, Karnataka" />
 
-        <android.support.constraint.Group
+        <androidx.constraintlayout.widget.Group
             android:id="@+id/group_park_list_item_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -199,6 +196,6 @@
             app:srcCompat="@drawable/ic_all_map_marker"
             tools:ignore="ContentDescription" />
 
-    </android.support.constraint.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>

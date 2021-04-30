@@ -4,7 +4,7 @@
     <!-- This resource is used for storing the information for Parks -->
 
     <!-- Template followed for the Parks data -->
-    <!--<string-array name="park_template">
+    <!--<string-array name="park_list_enter">
         <item>Name</item>
         <item>Star Rating (in Number)</item>
         <item>ParkClass Image (path to drawable)</item>

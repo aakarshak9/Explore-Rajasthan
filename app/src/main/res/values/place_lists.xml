@@ -31,13 +31,27 @@
         <item>http://www.tourism.rajasthan.gov.in/city-palace.html</item>
     </string-array>
 
-    <!-- Birla  Temple -->
-    <string-array name="birla_temple">
-        <item>Birla Temple</item>
+    <!-- Albert Hall -->
+    <string-array name="albert_hall">
+        <item>Albert Hall</item>
         <item>4.5</item>
-        <item>Pilgrimage</item>
-        <item>@drawable/layer_pl_tem</item>
-        <item>@drawable/birlam</item>
+        <item>Museum</item>
+        <item>@drawable/layer_pl_pal</item>
+        <item>@drawable/albert</item>
+        <item>10:00AM&#8211;4:00PM\nClosed on Mondays</item>
+        <item>₹300</item>
+        <item>Museum Rd, Ram Niwas Garden, Kailash Puri, Adarsh Nagar, Jaipur, Rajasthan 302004</item>
+        <item>The Albert Hall Museum in Jaipur is the oldest museum of the state and functions as the state museum of Rajasthan, India. The building is situated in Ram Niwas garden outside the city wall opposite New gate and is a fine example of Indo-Saracenic architecture. It is also called the Government Central Museum.</item>
+        <item>http://www.tourism.rajasthan.gov.in/hi/jaipur.html#albert-hall-museum--central-museum-</item>
+    </string-array>
+
+    <!-- Junagarh Fort -->
+    <string-array name="junagarh_fort">
+        <item>Junagarh Fort</item>
+        <item>4.5</item>
+        <item>Fort</item>
+        <item>@drawable/layer_pla_mus</item>
+        <item>@drawable/junagarh_fort</item>
         <item>6:30AM&#8211;2:00PM\n3:30PM&#8211;6:00PM\n7:30PM&#8211;8:00PM</item>
         <item>Free</item>
         <item>Birla Mandir, Jawahar Lal Nehru Marg, Tilak Nagar, Jaipur, Rajasthan 302022</item>
@@ -45,13 +59,13 @@
         <item>http://www.tourism.rajasthan.gov.in/birla-temple.html</item>
     </string-array>
 
-    <!-- Jaipur Zoo -->
-    <string-array name="jaipur_zoo">
-        <item>Jaipur Zoo</item>
+    <!-- Ranthambore Fort -->
+    <string-array name="rantham_bore">
+        <item>Ranthambore Fort</item>
         <item>4.5</item>
-        <item>Wildlife</item>
-        <item>@drawable/layer_p_w</item>
-        <item>@drawable/jaipur_zoo</item>
+        <item>Fort</item>
+        <item>@drawable/layer_pla_mus</item>
+        <item>@drawable/rantham_fort</item>
         <item>9:00AM&#8211;4:00PM\nClosed on Tuesdays</item>
         <item>Adult: ₹50,\n₹60 (Weekend)\nChild (5&#8211;12 yr): ₹20,\n₹30 (Weekend)</item>
         <item>Museum Rd, Ram Niwas Garden, Kailash Puri, Ramniwas Bagh, Jaipur, Rajasthan 302004</item>
@@ -85,20 +99,6 @@
         <item>Circuit House Rd, Cantt Area, Jodhpur, Rajasthan 342006</item>
         <item>Umaid Bhawan Palace, located in Jodhpur in Rajasthan, India, is one of the worlds largest private residences. A part of the palace is managed by Taj Hotels. Named after Maharaja Umaid Singh, grandfather of the present owner Gaj Singh. The palace has 347 rooms and is the principal residence of the former Jodhpur royal family. A part of the palace is a museum.Ground for the foundations of the building was broken on 18 November 1929 by Maharaja Umaid Singh and the construction work was completed in 1943.Recently, Umaid Bhawan Palace was awarded as the Worlds best hotelsClass at the Travellers Choice Award</item>
         <item>https://www.umaidbhawan.com/</item>
-    </string-array>
-
-    <!-- Albert Hall -->
-    <string-array name="albert_hall">
-        <item>Albert Hall</item>
-        <item>4.5</item>
-        <item>Museum</item>
-        <item>@drawable/layer_pla_mus</item>
-        <item>@drawable/albert</item>
-        <item>10:00AM&#8211;4:00PM\nClosed on Mondays</item>
-        <item>₹300</item>
-        <item>Museum Rd, Ram Niwas Garden, Kailash Puri, Adarsh Nagar, Jaipur, Rajasthan 302004</item>
-        <item>The Albert Hall Museum in Jaipur is the oldest museum of the state and functions as the state museum of Rajasthan, India. The building is situated in Ram Niwas garden outside the city wall opposite New gate and is a fine example of Indo-Saracenic architecture. It is also called the Government Central Museum.</item>
-        <item>http://www.tourism.rajasthan.gov.in/hi/jaipur.html#albert-hall-museum--central-museum-</item>
     </string-array>
 
     <!-- Hawa Mahal -->

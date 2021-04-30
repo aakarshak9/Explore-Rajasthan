@@ -13,12 +13,13 @@
     <!-- =========================== -->
     <array name="place_list_entries">
         <item>@array/city_palace_jaipur</item>
-        <item>@array/birla_temple</item>
-        <item>@array/jaipur_zoo</item>
-        <item>@array/st_andrew_chruch</item>
-        <item>@array/jodhpur_palace</item>
         <item>@array/albert_hall</item>
         <item>@array/hawa_mahal</item>
+        <item>@array/jodhpur_palace</item>
+        <item>@array/junagarh_fort</item>
+        <item>@array/rantham_bore</item>
+        <item>@array/st_andrew_chruch</item>
+
         <item>@array/gyan_museum</item>
         <item>@array/govind_dev_temple</item>
         <item>@array/nevta_dam</item>

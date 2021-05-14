@@ -1,8 +1,9 @@
 package com.example.aakarshak.explore.ui.common;
 
 import android.graphics.Rect;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class SpacingList extends RecyclerView.ItemDecoration {
     //Stores the spacing to be applied between the items in the List

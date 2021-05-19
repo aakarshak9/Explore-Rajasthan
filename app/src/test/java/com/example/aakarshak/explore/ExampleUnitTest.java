@@ -1,4 +1,4 @@
-package com.example.aakarshak.explore
+package com.example.aakarshak.explore;
 
 import org.junit.Test;
 
